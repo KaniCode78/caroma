@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --fuentePrincipal: "League Spartan", sans-serif;
+    --fondoBody: #F2F0F2;
+    /* --color_primario: #8527c3fd;
+    --color_primario_suave: #8527c383;
+    --color_blanco: #fff; */
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    background-color: var(--fondoBody);
+    font-size: 1.6rem;
+    line-height: 2;
+
+}
+
+
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+/**utilidades**/
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar__texto {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar img{
+    width: 15rem;
+    height: auto;
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+   
+
+}
+
+.menu_hamburguesa {
+    display: none;
+}
+
+.menu_hamburguesa:checked+.ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+
+.logo {
+    color: var(--color_blanco);
+}
+
+
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario_suave);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    /* height: calc(100vh - var(--altura_header)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s;
+}
+
+.li_links a{
+    text-decoration: none;
+}
+
+.link {
+    font-size: 3em;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+@media (min-width:768px) {
+    .labe_hamburguesa {
+        display: none;
+    }
+
+    .ul_links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .link {
+        font-size: 1.5rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
+    }
+
+    .link:hover {
+        color: #5f1192;
+    }
+}
+
+
+/* header */
+
+.header {
+   color: black;
+}
