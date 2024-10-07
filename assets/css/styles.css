@@ -6,8 +6,8 @@
     /* --color_primario: #8527c3fd;
     --color_primario_suave: #8527c383;
     --color_blanco: #fff; */
-    --altura_header: 80px;
-    --padding_left_right: 2rem;
+    /* --altura_header: 80px;
+    --padding_left_right: 2rem; */
     --ancho_maximo: 1200px;
 }
 
@@ -117,8 +117,8 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 var(--padding_left_right);
-   
+
+    padding-top: 5rem;
 
 }
 
@@ -165,6 +165,12 @@ p {
     font-size: 3em;
     color: var(--color_blanco);
     font-weight: bold;
+}
+
+
+
+.carru{
+    border-radius: 24px;
 }
 
 @media (min-width:768px) {
