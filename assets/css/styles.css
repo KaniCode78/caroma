@@ -1,129 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-
-:root {
-    --fuentePrincipal: "League Spartan", sans-serif;
-    --fondoBody: #F2F0F2;
-    /* --color_primario: #8527c3fd;
-    --color_primario_suave: #8527c383;
-    --color_blanco: #fff; */
-    /* --altura_header: 80px;
-    --padding_left_right: 2rem; */
-    --ancho_maximo: 1200px;
-}
-
-
-
 * {
     margin: 0;
     padding: 0;
-}
-
-
-
-
-html {
     box-sizing: border-box;
-    font-size: 62.5%;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: var(--fuentePrincipal);
-    background-color: var(--fondoBody);
-    font-size: 1.6rem;
-    line-height: 2;
-
+    height: 100vh;
+    background-color: #000;
+    background-image: url(../images/pexels-amar-14359340.jpg);
+    background-size: cover;
+    background-position: center center;
+ 
 }
 
-
-
-ol,
-ul,
 li {
     list-style: none;
 }
 
-
 a {
     text-decoration: none;
+    color: #000;
+    font-size: 1rem;
 }
 
-.contenedor {
-    max-width: 120rem;
+a:hover {
+    color: orange;
+}
+
+/*header*/
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-h1,
-h2,
-h3 {
-    text-align: center;
-    font-family: var(--fuenteSecundaria);
-}
-
-h1 {
-    font-size: 4rem;
-}
-
-h2 {
-    font-size: 3rem;
-}
-
-h3 {
-    font-size: 2.4rem;
-}
-
-p {
-    font-size: 2rem;
-}
-
-/**utilidades**/
-
-.no-margin {
-    margin: 0;
-}
-
-.no-padding {
-    padding: 0;
-}
-
-.centrar__texto {
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-.navbar img{
-    width: 15rem;
-    height: auto;
-}
-
-.navbar{
-    padding-top: 10rem;
-    padding-left: 10rem;
-}
-
-
-.carru{
-    border-radius: 24px;
-}
-
-@media (min-width:768px) {
+.navbar .logo img {
+    width: 140px;
+    height: 100%;
     
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/*dropdown*/
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255,255,255, 0.1);
+    -webkit-backdrop-filter: blur(15px); /*SOPORTE PARA NAVEGADORES IOS*/
+    backdrop-filter: blur(15px); /*SOPORTE OTROS NAVEGADORES*/
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown_menu.open{
+    height: 240px;
 }
 
 
-/* header */
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.header {
-   color: black;
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*hero*/
+
+#hero{
+height:  calc(100vh - 60px);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #000;
+}
+
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: rgba(255,255,255, 0.1);
+}
+
+
+/*responsive*/
+
+@media (max-width: 992px) {
+   .navbar .links,
+   .navbar .action_btn {
+    display: none;
+    }
+
+   .navbar .toggle_btn {
+    display: block;
+   }
+
+   .dropdown_menu{
+    display: block;
+   }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
 }
