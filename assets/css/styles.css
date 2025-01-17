@@ -312,6 +312,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    text-align: center;
 }
 
 
@@ -328,4 +329,13 @@ header {
 .cintillo .button:hover {
     transform: scale(1.15);
     color: #000;
+}
+
+@media (max-width: 688px) {
+    .cintillo {
+        font-size: 1.5rem;
+
+
+
+    }
 }
