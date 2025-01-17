@@ -36,11 +36,6 @@ a {
     font-weight: 500;
 }
 
-a:hover {
-
-    font-size: 1.2rem;
-    border-bottom: 2px solid #D991A4;
-}
 
 /*header*/
 
@@ -62,9 +57,13 @@ header {
 .navbar .logo img {
     width: 140px;
     height: 100%;
-
-
 }
+
+.navbar a:hover {
+    /* font-size: 1.2rem; */
+    border-bottom: 2px solid #D991A4;
+}
+
 
 .navbar .links {
     display: flex;
@@ -85,17 +84,18 @@ header {
     /* border: none; */
     outline: none;
     /* border-radius: 20px; */
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     font-weight: bold;
     cursor: pointer;
     border-radius: 20px;
     background: #D991A4;
-    box-shadow:  20px 20px 60px #b87b8b,
-                 -20px -20px 60px #faa7bd;
+    box-shadow: 20px 20px 60px #b87b8b,
+        -20px -20px 60px #faa7bd;
+    /* transition: transform 0.3s ease; */
 }
 
 .action_btn:hover {
-    scale: 1.05;
+    transform: scale(1.1);
     color: #000;
 }
 
@@ -174,7 +174,6 @@ header {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     width: 35rem;
-
 }
 
 
@@ -188,8 +187,6 @@ header {
     padding-top: 5rem;
     padding-bottom: 5rem;
     background-color: #BAD9D6;
-
-
 }
 
 .img_about img {
@@ -199,7 +196,6 @@ header {
     height: 500px;
     object-fit: cover;
     border-radius: 50%;
-
 }
 
 .texto_about {
@@ -223,10 +219,6 @@ header {
 #espacio {
     padding-top: 2rem;
 }
-
-
-
-
 
 
 
@@ -262,9 +254,6 @@ header {
     .dropdown_menu {
         display: block;
     }
-
-
-
 }
 
 @media (max-width: 688px) {
@@ -294,7 +283,6 @@ header {
     .texto_about h2 {
         font-size: 2.5rem;
         padding: 0;
-
     }
 
     .texto_about p {
@@ -302,5 +290,42 @@ header {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+}
 
+/* Cintillo */
+
+.cintillo {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F6C73;
+    color: #fff;
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    gap: 5rem;
+}
+
+.cintillo .texto-cintillo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.cintillo .button {
+    background: #D991A4;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cintillo .button:hover {
+    transform: scale(1.15);
+    color: #000;
 }
