@@ -334,10 +334,10 @@ header {
 @media (max-width: 688px) {
     .cintillo {
         font-size: 1.5rem;
-
+    }
     .cintillo .button {
             font-size: 0.7rem;
+            text-align: center;
         } 
 
     }
-}
