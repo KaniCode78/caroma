@@ -295,8 +295,9 @@ header {
 /* Cintillo */
 
 .cintillo {
-    height: 160px;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #2F6C73;
@@ -329,6 +330,12 @@ header {
 .cintillo .button:hover {
     transform: scale(1.15);
     color: #000;
+}
+
+
+.cintillo .emotion img{
+    width: 140px;
+    height: auto;
 }
 
 @media (max-width: 688px) {
