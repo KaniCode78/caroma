@@ -320,16 +320,19 @@ header {
 .cintillo .button {
     background: #D991A4;
     color: #000;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    border: solid 2px #000;
 }
 
 .cintillo .button:hover {
     transform: scale(1.15);
-    color: #000;
+    color: #fff;
+    border: solid 2px #fff;
+    background-color: #2F6C73;
 }
 
 

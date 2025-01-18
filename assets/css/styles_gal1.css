@@ -27,10 +27,10 @@
 
 .gal1 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 95%;
     margin: auto;
-    grid-gap: 10px;
+    grid-gap: 20px;
     padding: 40px 0;
     overflow: hidden;
 }
