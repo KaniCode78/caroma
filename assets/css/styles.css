@@ -361,7 +361,6 @@ header {
     border-radius: calc(var(--curve) * 1px); 
     overflow: hidden;
     text-decoration: none;
- 
 }
 
 .cards {
@@ -590,8 +589,19 @@ header {
     width: 150px;
     height: auto;
     display: block;
+    flex-direction: column;
 }
 
+@media screen and (max-width: 688px) {
+    .certificaciones h2 {
+        font-size: 2rem;
+    }
+
+    .cert img {
+        width: 100px;
+    }
+    
+}
 
 /* termina certificaciones */
 
