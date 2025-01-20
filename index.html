@@ -8,15 +8,35 @@
   <title>Caroma Travel</title>
 
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <link rel="stylesheet" href="./assets/css/cards.css">
+  <!-- <link rel="stylesheet" href="./assets/css/card.css"> -->
   <link rel="stylesheet" href="./assets/css/styles_gal1.css">
 
 </head>
 
 <body>
-  <header>
-    <div class="navbar">
+<!-- Fix Redes Sociales -->
+  <div class="page">
+    <div class="box__wasa">
+        <a href="https://wa.me/9982910054" target="_blank" rel="noopener noreferrer" aria-label="Enlace Whatsapp">
+            <img class="logo__fix" src="./assets/images/fix_redes/Whatsapp_2.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com/ORSAPUBLICIDAD" aria-label="Enlace facebook" target="_blank"
+            rel="noopener noreferrer"> <img class="logo__fix" src="./assets/images/fix_redes/inst.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com/ORSAPUBLICIDAD" aria-label="Enlace facebook" target="_blank"
+            rel="noopener noreferrer"> <img class="logo__fix" src="./assets/images/fix_redes/fc.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com/ORSAPUBLICIDAD" aria-label="Enlace facebook" target="_blank"
+            rel="noopener noreferrer"> <img class="logo__fix" src="./assets/images/fix_redes/tt.svg" alt="">
+        </a>
+    </div>
+</div>
+<!-- Fix Redes Sociales -->
 
+<!-- inicia header -->
+
+  <header class="contenedor">
+    <div class="navbar">
       <div class="logo">
         <img src="./assets/images/Caroma_logo.svg" alt="logo">
       </div>
@@ -25,7 +45,7 @@
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Acerca de</a></li>
         <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Reserva</a></li>
       </ul>
       <a href="#" class="action_btn">Plantilla de Viaje</a>
       <div class="toggle_btn">
@@ -38,7 +58,7 @@
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Acerca de</a></li>
         <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Reserva</a></li>
         <li><a href="#" class="action_btn">Plantilla de Viaje</a></li>
       </ul>
     </div>
@@ -48,12 +68,11 @@
     </div>
   </header>
 
+<!-- Termina header  -->
 
+<!-- inicia acerca de mi -->
 
-
-
-
-  <main>
+  <main class="contenedor">
 
     <article class="articulo">
       <div class="img_about">
@@ -73,12 +92,14 @@
       </div>
     </article>
 
-    <!-- Card Servicios -->
+<!-- termina acerca de mi  -->
+
+<!-- Card Servicios -->
 
     <div class="card">
       <div class="cards">
         <div>
-          <div href="" class="card">
+          <div class="card">
             <img src="./assets/images/gal/tours.png" class="card__image" alt="" />
             <div class="card__overlay">
               <div class="card__header">
@@ -90,13 +111,14 @@
                   <h3 class="card__title">Tours</h3>
                 </div>
               </div>
-              <p class="card__description">Excelente atención y servicio, definitivamente volvería a reservar con ella,
-                gracias por nuestras entradas a Aqua Nick.</p>
+              <p class="card__description">Necesitas un escape sin estress, un tour es lo que necesitas en tu destino,
+                y para qye no te preocupes por nada, nosotros te lo organizamos.
+              </p>
             </div>
           </div>
         </div>
         <div>
-          <div href="" class="card">
+          <div class="card">
             <img src="./assets/images/gal/habitacion.jpg" class="card__image" alt="" />
             <div class="card__overlay">
               <div class="card__header">
@@ -105,17 +127,17 @@
                 </svg>
                 <img class="card__thumb" src="./assets/images/gal/Hotel.svg" alt="" />
                 <div class="card__header-text">
-                  <h3 class="card__title">Hospedaje</h3>
+                  <h3 class="card__title">Hospejade</h3>
 
                 </div>
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                blanditiis?</p>
+              <p class="card__description">Que tal un merecido descanso, o mejor aun todo incluido para tener un descanso de 
+                lujo, bebidas y comida a tu disposición.</p>
             </div>
           </div>
         </div>
         <div>
-          <div href="" class="card">
+          <div class="card">
             <img src="./assets/images/gal/transportacion.png" class="card__image" alt="" />
             <div class="card__overlay">
               <div class="card__header">
@@ -127,14 +149,15 @@
                   <h3 class="card__title">Transporación</h3>
                 </div>
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                blanditiis?</p>
+              <p class="card__description">Llegas a tu destino y no sabes como llegar, tranquil@ nostros 
+                te llevamos a donde tu quieras, desde el aeropuerto hasta tu hotel o destino turistico.
+              </p>
             </div>
           </div>
         </div>
 
         <div>
-          <div href="" class="card">
+          <div class="card">
             <img src="./assets/images/gal/renta.png" class="card__image" alt="" />
             <div class="card__overlay">
               <div class="card__header">
@@ -146,152 +169,184 @@
                   <h3 class="card__title">Renta de Vehiculos</h3>
                 </div>
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-                blanditiis?</p>
+              <p class="card__description">Lo tuyo es la libertad e indepencia, la explarción? Excelente tenemos el tipo de auto que necesitas,
+                pregunta por nuestras opciones.
+              </p>
             </div>
           </div>
         </div>
-
-      
-
-        
-
       </div>
     </div>
+  </main>
 
-    <!-- inicia Cintillo -->
-
-    <section class="cintillo">
-
- 
-        <div class="texto-cintillo">
-          <h4>Difruta, Viaja y Diviertete como Nunca </h4>
-        </div>
-        <div class="button">
-          <a href="#">¡Reserva Ya!</a>
-        </div>
-     
-      
-      
-      <div class="emotion">
-        <img src="./assets/images/alberca.svg" alt="">
-        <img src="./assets/images/auti.svg" alt="">
-        <img src="./assets/images/edificio.svg" alt="">
-        <img src="./assets/images/playa.svg" alt="">
-      </div>      
-
-    </section>
-
-    <!-- Termina Cintillo -->
-
-    <!-- Galeria -->
-    <div class="gal1" id="Galeria">
-
-      <h2>Experiencias Caroma Travel</h2>
-      <!-- <span class="linea"></span> -->
-      <section class="galeria">
-
-        <a href="#image1">
-          <img src="./assets/images/gal_1/uno.jpg" alt="dd">
-        </a>
-        <a href="#image2">
-          <img src="./assets/images/gal_1/dos.jpg" alt="dd">
-        </a>
-        <a href="#image3">
-          <img src="./assets/images/gal_1/tres.jpg" alt="dd">
-        </a>
-        <a href="#image4">
-          <img src="./assets/images/gal_1/cuatro.jpg" alt="dd">
-        </a>
-        <a href="#image5">
-          <img src="./assets/images/gal_1/cinco.jpg" alt="dd">
-        </a>
-        <a href="#image6">
-          <img src="./assets/images/gal_1/seis.jpg" alt="d">
-        </a>
-      </section>
-
-      <article class="ligth-box" id="image1">
-        <a href="#image6" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
-        <img src="./assets/images/gal_1/uno.jpg" alt="d">
-        <a href="#image2" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
-        <a href="#Galeria" class="close">X</a>
-      </article>
-
-      <article class="ligth-box" id="image2">
-        <a href="#image1" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
-        <img src="./assets/images/gal_1/dos.jpg" alt="d">
-        <a href="#image3" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
-        <a href="#Galeria" class="close">X</a>
-      </article>
-
-      <article class="ligth-box" id="image3">
-        <a href="#image2" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
-        <img src="./assets/images/gal_1/tres.jpg" alt="d">
-        <a href="#image4" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
-        <a href="#Galeria" class="close">X</a>
-      </article>
-
-      <article class="ligth-box" id="image4">
-        <a href="#image3" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
-        <img src="./assets/images/gal_1/cuatro.jpg" alt="d">
-        <a href="#image5" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
-        <a href="#Galeria" class="close">X</a>
-      </article>
-
-      <article class="ligth-box" id="image5">
-        <a href="#image4" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
-        <img src="./assets/images/gal_1/cinco.jpg" alt="d">
-        <a href="#image6" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
-        <a href="#Galeria" class="close">X</a>
-      </article>
-
-      <article class="ligth-box" id="image6">
-        <a href="#image5" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
-        <img src="./assets/images/gal_1/seis.jpg" alt="d">
-        <a href="#image1" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
-        <a href="#Galeria" class="close">X</a>
-      </article>
+  <!-- termina Card Servicios  -->
 
 
+  <!-- inicia Cintillo -->
+
+  <section class="cintillo contenedor">
 
 
+    <div class="texto-cintillo">
+      <h4>Difruta, Viaja y Diviertete como Nunca </h4>
+    </div>
+    <div class="button">
+      <a href="#">¡Reserva Ya!</a>
     </div>
 
 
 
+    <div class="emotion">
+      <img src="./assets/images/alberca.svg" alt="">
+      <img src="./assets/images/auti.svg" alt="">
+      <img src="./assets/images/edificio.svg" alt="">
+      <img src="./assets/images/playa.svg" alt="">
+    </div>
+
+  </section>
+
+  <!-- Termina Cintillo -->
+
+
+
+  <!-- Galeria -->
+  <div class="gal1 contenedor" id="Galeria">
+
+    <h2>Experiencias Caroma Travel</h2>
+
+    <section class="galeria">
+
+      <a href="#image1">
+        <img src="./assets/images/gal_1/uno.jpg" alt="dd">
+      </a>
+      <a href="#image2">
+        <img src="./assets/images/gal_1/dos.jpg" alt="dd">
+      </a>
+      <a href="#image3">
+        <img src="./assets/images/gal_1/tres.jpg" alt="dd">
+      </a>
+      <a href="#image4">
+        <img src="./assets/images/gal_1/cuatro.jpg" alt="dd">
+      </a>
+      <a href="#image5">
+        <img src="./assets/images/gal_1/cinco.jpg" alt="dd">
+      </a>
+      <a href="#image6">
+        <img src="./assets/images/gal_1/seis.jpg" alt="d">
+      </a>
+    </section>
+
+    <article class="ligth-box" id="image1">
+      <a href="#image6" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
+      <img src="./assets/images/gal_1/uno.jpg" alt="d">
+      <a href="#image2" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
+      <a href="#Galeria" class="close">X</a>
+    </article>
+
+    <article class="ligth-box" id="image2">
+      <a href="#image1" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
+      <img src="./assets/images/gal_1/dos.jpg" alt="d">
+      <a href="#image3" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
+      <a href="#Galeria" class="close">X</a>
+    </article>
+
+    <article class="ligth-box" id="image3">
+      <a href="#image2" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
+      <img src="./assets/images/gal_1/tres.jpg" alt="d">
+      <a href="#image4" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
+      <a href="#Galeria" class="close">X</a>
+    </article>
+
+    <article class="ligth-box" id="image4">
+      <a href="#image3" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
+      <img src="./assets/images/gal_1/cuatro.jpg" alt="d">
+      <a href="#image5" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
+      <a href="#Galeria" class="close">X</a>
+    </article>
+
+    <article class="ligth-box" id="image5">
+      <a href="#image4" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
+      <img src="./assets/images/gal_1/cinco.jpg" alt="d">
+      <a href="#image6" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
+      <a href="#Galeria" class="close">X</a>
+    </article>
+
+    <article class="ligth-box" id="image6">
+      <a href="#image5" class="next" aria-label="atras"><i class="fa-solid fa-caret-left"></i></i></a>
+      <img src="./assets/images/gal_1/seis.jpg" alt="d">
+      <a href="#image1" class="next" aria-label="siguiente"><i class="fa-solid fa-caret-right"></i></a>
+      <a href="#Galeria" class="close">X</a>
+    </article>
+
+  </div>
+
+  <!-- Termina Galeria -->
+
+  <section class="certificaciones contenedor">
+    <!-- <h2>Certificaciones</h2> -->
+    <div class="cert">
+      <img src="./assets/images/gal_cer/ADVP-Logo-lg.png" alt="">
+      <img src="./assets/images/gal_cer/cruise-lines-international-association-clia-vector-logo-2022.svg" alt="">
+      <img src="./assets/images/gal_cer/logo.webp" alt="">
+      <img src="./assets/images/gal_cer/Logo_IMPI.png" alt="">
+      <img src="./assets/images/gal_cer/pngegg (1).png" alt="">
+      <img src="./assets/images/gal_cer/pngegg.png" alt="">
+    </div>
+  </section>
 
 
 
 
 
-
-
-
-
-    <!-- <footer>
-      <div class="pie">
-        <div class="contacto">
-          <h3>Contacto</h3>
-          <ul>
-            <li><i class="fa-solid fa-map-marker-alt"></i> Calle 123, 456, Ciudad, Estado</li>
-            <li><i class="fa-solid fa-phone"></i> +55 123 456 7890</li>
-            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@caroma.com">info@caroma.com</a></li>
-          </ul>
+  <section class="contacto" id="Contacts">
+    <div>
+      <div>
+        <div class="section-tittle text-center">
+          <h1>“No lo pienses más, ¡haz tu reserva y pásala brutal!”</h1>
         </div>
-        <div class="redes">
-          <h3>Redes Sociales</h3>
-          <ul>
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      </div>
+
+      <div>
+        <div class="contact-form">
+          <div>
+            <div class="form-header">
+              <p>”¿Te quedaste con dudas? Escríbenos, no mordemos 😉”</p>
+            </div>
+          </div>
+
+          <div class="form-fields">
+            <div class="input-field">
+              <input type="text" placeholder="Nombre" id="" class="form-control">
+            </div>
+            <div class="input-field">
+              <input type="email" placeholder="E-mail" id="" class="form-control">
+            </div>
+          </div>
+          <div class="form-field">
+            <div class="input-field full-width">
+              <textarea name="Message" placeholder="Comentarios" id="" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <a href="#" class="submit-button">Enviar</a>
+          </div>
 
         </div>
-    </footer> -->
+      </div>
 
+    </div>
+  </section>
 
+  <footer>
 
+    <div class="redes">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
 
-  </main>
+    </div>
+  </footer>
 
 
   <script src="./assets/js/nav.js"></script>
