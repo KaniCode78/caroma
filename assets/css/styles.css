@@ -16,21 +16,17 @@ html {
 }
 
 
-* {
+body {
+    background-color: #BAD9D6;
     margin: 0;
     padding: 0;
-
     font-family: var(--fuentePrincipal);
 }
 
-body {
-    background-color: #BAD9D6;
-}
-
-/* .contenedor {
+.contenedor {
     max-width: 120rem;
     margin: 0 auto;
-} */
+} 
 
 
 
@@ -66,6 +62,7 @@ a {
     flex-direction: column-reverse;
     padding-left: 2rem;
     padding-bottom: 2rem;
+
 }
 
 .logo__fix {
@@ -277,6 +274,55 @@ header {
 
 #espacio {
     padding-top: 2rem;
+}
+
+
+/* Estilos para dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 600px) {
+    .articulo {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .img_about img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .texto_about h2 {
+        font-size: 2rem;
+    }
+
+    .texto_about p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para tabletas (pantallas medianas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .articulo {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .img_about img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .texto_about h2 {
+        font-size: 3rem;
+    }
+
+    .texto_about p {
+        font-size: 1.3rem;
+    }
 }
 
 
@@ -540,8 +586,66 @@ header {
         flex-direction: column;
         align-items: center;
     }
+} 
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .emotion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emotion img {
+        width: 100%;
+        height: auto;
+    }
 }
 
+
+/* Estilos para tabletas (pantallas medianas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contenedor {
+        padding: 2rem;
+        max-width: 100%;
+    }
+
+    .emotion {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .emotion img {
+        flex: 1 1 45%; /* Ajusta el tamaño según sea necesario */
+        max-width: 45%;
+        height: auto;
+    }
+}
+
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .contenedor {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    .emotion {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .emotion img {
+        flex: 1 1 22%; /* Ajusta el tamaño según sea necesario */
+        max-width: 22%;
+        height: auto;
+    }
+}
 /*termina cintillo */
 
 
@@ -675,11 +779,17 @@ header {
 
 /* certificaciones */
 
+.certificaciones{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
 .certificaciones h2 {
     text-align: center;
     font-size: 3rem;
     color: #2F6C73;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 
 }
 
@@ -698,10 +808,10 @@ header {
     flex-direction: column;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     .certificaciones .cert {
-        flex-direction: column;
         gap: 1rem;
+        flex-wrap: wrap;
     }
 
     .certificaciones h2 {
@@ -714,7 +824,12 @@ header {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
+    .certificaciones .cert{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
     .cert img {
         width: 80px;
     }
@@ -729,8 +844,10 @@ header {
     padding: 100px 15px;
     /* background-color: #f1f1f1; */
     background-color: #bad9d6;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    /* padding-left: 6rem;
+    padding-right: 6rem; */
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 .contacto .section-tittle {
@@ -747,7 +864,7 @@ header {
     /* background-color: #ffffff; */
     flex: 0 0 100%;
     max-width: 100%;
-    padding: 50px;
+    /* padding: 50px; */
     border: 2px solid #eeeeee;
     ;
 }
@@ -834,6 +951,34 @@ header {
     color: #f1f1f1;
 }
 
+
+@media screen and (max-width: 900px) {
+    .contacto {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .contacto .contact-form {
+        padding: 30px;
+    }
+
+    .contacto .contact-form .form-fields {
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .contacto .contact-form .input-field {
+        flex: 1 0 100%;
+    }
+
+    .contacto .contact-form .form-control {
+        width: 100%;
+    }
+
+    .contacto .contact-form .form-submit {
+        text-align: center;
+    }
+}
 
 /* termina formulario de contacto */
 
