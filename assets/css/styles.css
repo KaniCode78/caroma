@@ -97,7 +97,7 @@ header {
 }
 
 header {
-    position: relative;
+    /* position: relative; */
     padding: 0 2rem;
 }
 
@@ -236,6 +236,7 @@ header {
 
 /* inicia acerca de mi */
 
+
 .articulo {
     display: flex;
     flex-direction: row;
@@ -243,7 +244,8 @@ header {
     /* gap: 10rem; */
     padding-top: 5rem;
     padding-bottom: 5rem;
-
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 .img_about img {
@@ -355,6 +357,8 @@ header {
 /* Inicias cards de servicios */
 
 .card {
+    max-width: 120rem;
+    margin: 0 auto;
     position: relative;
     display: block;
     height: 100%;
@@ -543,7 +547,7 @@ header {
 
 /* Inicia galeria */
 .gal1 {
-    width: 100%;
+    max-width: 120rem;
     margin: 0 auto;
 
 }
@@ -565,7 +569,7 @@ header {
 
 .gal1 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     width: 95%;
     margin: auto;
     grid-gap: 20px;
