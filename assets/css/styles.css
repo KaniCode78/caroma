@@ -115,7 +115,7 @@ header {
 
 .navbar a:hover {
     /* font-size: 1.2rem; */
-    border-bottom: 2px solid #D991A4;
+    border-bottom: 2px solid #97A699;
 }
 
 
@@ -133,7 +133,7 @@ header {
 
 .action_btn {
     /* background-color: #D991A4; */
-    color: #000;
+    color: #ffffff;
     padding: 0.5rem 1rem;
     /* border: none; */
     outline: none;
@@ -142,15 +142,16 @@ header {
     font-weight: bold;
     cursor: pointer;
     border-radius: 20px;
-    background: #D991A4;
-    box-shadow: 20px 20px 60px #b87b8b,
-        -20px -20px 60px #faa7bd;
-    /* transition: transform 0.3s ease; */
+    background: #3e848c;
+    /* box-shadow: 20px 20px 60px #97A699,
+        -20px -20px 60px #135625;  */
+    transition: transform 0.3s ease; 
 }
 
 .action_btn:hover {
     transform: scale(1.1);
-    color: #000;
+    color: #3e848c;
+    background: #ffffff;
 }
 
 .action_btn:active {
