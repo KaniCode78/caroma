@@ -83,6 +83,7 @@ header {
     background-image: url(../images/pexels-amar-14359340.jpg);
     background-size: cover;
     background-position: center center;
+    border: 2px solid yellow;
 
 }
 
@@ -92,6 +93,7 @@ header {
 }
 
 .navbar {
+    border: 2px solid yellow;
     width: 100%;
     height: 60px;
     max-width: 1200px;
@@ -125,7 +127,7 @@ header {
     display: none;
 }
 
-.action_btn {
+.actionp_btn {
     color: #ffffff;
     padding: 0.5rem 1rem;
     border: none; 
@@ -141,19 +143,20 @@ header {
     transition: transform 0.3s ease;
 }
 
-.action_btn:hover {
+/* .action_btn:hover {
     transform: scale(1.1);
     color: #3e848c;
     background: #ffffff;
 }
 
 .action_btn:active {
-    scale: 0.95; 
-}
+    scale: 0.95;
+} */
 
 /*Inicia dropdown menu*/
 
 .dropdown_menu {
+   
     display: none;
     position: absolute;
     right: 2rem;
@@ -170,18 +173,21 @@ header {
 }
 
 .dropdown_menu.open {
+    /* display: block; */
     height: 240px;
+    border: 2px solid #6cbc76;
 }
 
 
 .dropdown_menu li {
-    padding: 0.7rem;
+
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dropdown_menu .action_btn {
+.dropdown_menu .actionp_btn {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -192,6 +198,7 @@ header {
 /*hero*/
 
 #hero {
+    border: 2px solid yellow;
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
@@ -231,6 +238,7 @@ header {
 
 
 .articulo {
+    border: 2px solid yellow;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -344,7 +352,7 @@ header {
 @media (max-width: 992px) {
 
     .navbar .links,
-    .navbar .action_btn {
+    .navbar .actionp_btn {
         display: none;
     }
 
@@ -353,8 +361,12 @@ header {
     }
 
     .dropdown_menu {
+        display: none;    
+    }
+    .dropdown_menu.open{
         display: block;
     }
+
 }
 
 @media (max-width: 688px) {
@@ -399,6 +411,7 @@ header {
 /* Inicias cards de servicios */
 
 .card {
+    border: 2px solid yellow;
     max-width: 120rem;
     margin: 0 auto;
     position: relative;
@@ -512,6 +525,7 @@ header {
 /* Inicia Cintillo */
 
 .cintillo {
+    border: 2px solid yellow;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -597,7 +611,7 @@ header {
 }
 
 @media (max-width: 600px) {
-    */ .contenedor {
+    .contenedor {
         padding: 1rem;
         max-width: 100%;
         height: 100%;
@@ -664,9 +678,12 @@ header {
 
 
 /* Inicia galeria */
+
+
 .gal1 {
     max-width: 120rem;
     margin: 0 auto;
+    border: 2px solid yellow;
 
 }
 
@@ -794,6 +811,7 @@ header {
 /* certificaciones */
 
 .certificaciones {
+    border: 2px solid yellow;
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -855,6 +873,7 @@ header {
 /* formulario de contacto */
 
 .contacto {
+    border: 2px solid yellow;
     padding: 100px 15px;
     /* background-color: #f1f1f1; */
     background-color: #bad9d6;
@@ -1005,6 +1024,7 @@ header {
 /* footer */
 
 footer {
+    border: 2px solid yellow;
     display: flex;
     justify-content: center;
     flex-direction: column;
