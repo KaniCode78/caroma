@@ -222,6 +222,7 @@ a {
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    height: max-content;
 }
 
 .img_about img {
