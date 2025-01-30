@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Quicksand:wght@300..700&display=swap');
 
 :root {
     --fuenteTitulos: League Spartan, sans-serif;
@@ -26,17 +23,16 @@ body {
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
-} 
+}
 
 
 
-
-li {
+li, a {
     list-style: none;
+    text-decoration: none;
 }
 
 a {
-    text-decoration: none;
     color: #000;
     font-size: 1.2rem;
     font-weight: 500;
@@ -47,7 +43,6 @@ a {
 }
 
 /* Fixed de redes sociales */
-
 
 .page {
     position: fixed;
@@ -72,7 +67,7 @@ a {
     right: 5px;
     height: 48px;
     width: 48px;
-    background-color: var(none);
+ 
 }
 
 /* Fixed de redes sociales */
@@ -145,7 +140,7 @@ header {
     background: #3e848c;
     /* box-shadow: 20px 20px 60px #97A699,
         -20px -20px 60px #135625;  */
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .action_btn:hover {
@@ -512,9 +507,9 @@ header {
     overflow: hidden;
 }
 
-/*termina servicios */
+/* Termina Servicios */
 
-/* Cintillo */
+/* Inicia Cintillo */
 
 .cintillo {
     height: 100vh;
@@ -536,11 +531,21 @@ header {
     align-items: center;
     gap: 1rem;
     text-align: center;
+    flex-direction: column;
 }
 
+.texto-cintillo h2 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.texto-cintillo p {
+    font-size: 1.5rem;
+    color: #fff;
+}
 
 .cintillo .button {
-    background: #D991A4;
+    background: #6cbc76;
     color: #000;
     padding: 1rem 1rem;
     border-radius: 12px;
@@ -566,7 +571,7 @@ header {
 }
 
 .emotion img {
-    max-width: 150px;
+    /* max-width: 150px; */
     height: auto;
     flex: 1 1 100px;
     /* Ajusta el tamaño mínimo según sea necesario */
@@ -574,8 +579,10 @@ header {
 
 @media (max-width: 400px) {
     .cintillo {
+        height: 100%;
         font-size: 1.5rem;
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     .cintillo .button {
@@ -587,12 +594,13 @@ header {
         flex-direction: column;
         align-items: center;
     }
-} 
+}
 
 @media (max-width: 600px) {
-    .contenedor {
+    */ .contenedor {
         padding: 1rem;
         max-width: 100%;
+        height: 100%;
     }
 
     .emotion {
@@ -601,8 +609,8 @@ header {
     }
 
     .emotion img {
-        width: 100%;
-        height: auto;
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -612,17 +620,20 @@ header {
     .contenedor {
         padding: 2rem;
         max-width: 100%;
+        height: 100%;
+        background-color: #6a515e;
     }
 
     .emotion {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
     }
 
     .emotion img {
-        flex: 1 1 45%; /* Ajusta el tamaño según sea necesario */
-        max-width: 45%;
+
+        flex: 1 1 30%;
+        /* Ajusta el tamaño según sea necesario */
+        max-width: 30%;
         height: auto;
     }
 }
@@ -642,11 +653,13 @@ header {
     }
 
     .emotion img {
-        flex: 1 1 22%; /* Ajusta el tamaño según sea necesario */
-        max-width: 22%;
+        flex: 1 1 12%;
+        /* Ajusta el tamaño según sea necesario */
+        max-width: 12%;
         height: auto;
     }
 }
+
 /*termina cintillo */
 
 
@@ -780,7 +793,7 @@ header {
 
 /* certificaciones */
 
-.certificaciones{
+.certificaciones {
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -826,7 +839,7 @@ header {
 }
 
 @media screen and (max-width: 300px) {
-    .certificaciones .cert{
+    .certificaciones .cert {
         flex-direction: column;
         flex-wrap: nowrap;
     }
@@ -865,7 +878,7 @@ header {
     /* background-color: #ffffff; */
     flex: 0 0 100%;
     max-width: 100%;
-    /* padding: 50px; */
+    padding: 50px;
     border: 2px solid #eeeeee;
     ;
 }
@@ -960,20 +973,26 @@ header {
     }
 
     .contacto .contact-form {
-        padding: 30px;
+     border: none;
     }
 
-    .contacto .contact-form .form-fields {
+
+
+    .contacto .section-tittle {
+        padding-top: 2rem;
+    }
+
+     .contacto .contact-form .form-fields {
         flex-direction: column;
         gap: 0rem;
     }
 
     .contacto .contact-form .input-field {
-        flex: 1 0 100%;
+        flex: 1 0 90%;
     }
 
     .contacto .contact-form .form-control {
-        width: 100%;
+        width: 90%;
     }
 
     .contacto .contact-form .form-submit {
@@ -1005,7 +1024,7 @@ footer a i {
     padding-bottom: 2rem;
 }
 
-.footer__info{
+.footer__info {
     text-align: center;
     line-height: 2rem;
 }
