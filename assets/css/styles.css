@@ -12,20 +12,12 @@ html {
 
 }
 
-
 body {
     background-color: #BAD9D6;
     margin: 0;
     padding: 0;
     font-family: var(--fuentePrincipal);
 }
-
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
-
 
 li, a {
     list-style: none;
@@ -42,6 +34,11 @@ a {
     text-align: center;
 }
 
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
 /* Fixed de redes sociales */
 
 .page {
@@ -49,7 +46,6 @@ a {
     padding: 0;
     bottom: 0;
     left: 0;
-
 }
 
 .box__wasa {
@@ -57,7 +53,6 @@ a {
     flex-direction: column-reverse;
     padding-left: 2rem;
     padding-bottom: 2rem;
-
 }
 
 .logo__fix {
@@ -71,32 +66,24 @@ a {
 /* Fixed de redes sociales */
 
 
-
-
-
 /*header*/
 
-
-header {
+/* imagen de fondo */
+.contenedor_header {
     height: 100vh;
     background-color: #000;
     background-image: url(../images/pexels-amar-14359340.jpg);
     background-size: cover;
     background-position: center center;
-    border: 2px solid yellow;
-
-}
-
-header {
-    /* position: relative; */
+    background-attachment: fixed;  /*fijado de fondo en todo el sitio*/
+    overflow: hidden;
     padding: 0 2rem;
 }
 
 .navbar {
     border: 2px solid yellow;
-    width: 100%;
     height: 60px;
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -236,24 +223,23 @@ header {
 
 /* inicia acerca de mi */
 
-
-.articulo {
+.about {
     border: 2px solid yellow;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    /* gap: 10rem; */
     padding-top: 5rem;
     padding-bottom: 5rem;
-    max-width: 120rem;
-    margin: 0 auto;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .img_about img {
-    display: flex;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     flex-basis: 50%;
-    width: 500px;
-    height: 500px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -277,133 +263,10 @@ header {
 }
 
 #espacio {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 
-/* Estilos para dispositivos móviles (pantallas pequeñas) */
-@media (max-width: 600px) {
-    .articulo {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    .img_about img {
-        width: 100%;
-        height: auto;
-        max-width: 300px;
-    }
-
-    .texto_about h2 {
-        font-size: 2rem;
-    }
-
-    .texto_about p {
-        font-size: 1.2rem;
-    }
-}
-
-/* Estilos para tabletas (pantallas medianas) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .articulo {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    .img_about img {
-        width: 100%;
-        height: auto;
-        max-width: 400px;
-    }
-
-    .texto_about h2 {
-        font-size: 3rem;
-    }
-
-    .texto_about p {
-        font-size: 1.3rem;
-    }
-}
-
-
-
-/*responsive*/
-
-@media (max-width: 1024px) {
-    .img_about img {
-        width: 400px;
-        height: 400px;
-        margin: 0 auto;
-    }
-
-    .texto_about h2 {
-        font-size: 3rem;
-    }
-
-    .texto_about p {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 992px) {
-
-    .navbar .links,
-    .navbar .actionp_btn {
-        display: none;
-    }
-
-    .navbar .toggle_btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: none;    
-    }
-    .dropdown_menu.open{
-        display: block;
-    }
-
-}
-
-@media (max-width: 688px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
-
-    #hero p {
-        display: none;
-    }
-
-    .articulo {
-        flex-direction: column;
-        gap: 0;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    .img_about img {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-
-    }
-
-    .texto_about h2 {
-        font-size: 2.5rem;
-        padding: 0;
-    }
-
-    .texto_about p {
-        font-size: 1em;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
 
 /* termina acerca de mi */
 
@@ -576,7 +439,6 @@ header {
     background-color: #2F6C73;
 }
 
-
 .cintillo .emotion {
     display: flex;
     flex-wrap: wrap;
@@ -635,7 +497,7 @@ header {
         padding: 2rem;
         max-width: 100%;
         height: 100%;
-        background-color: #6a515e;
+     
     }
 
     .emotion {
