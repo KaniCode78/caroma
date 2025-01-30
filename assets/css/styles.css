@@ -19,7 +19,8 @@ body {
     font-family: var(--fuentePrincipal);
 }
 
-li, a {
+li,
+a {
     list-style: none;
     text-decoration: none;
 }
@@ -75,13 +76,13 @@ a {
     background-image: url(../images/pexels-amar-14359340.jpg);
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;  /*fijado de fondo en todo el sitio*/
+    background-attachment: fixed;
+    /*fijado de fondo en todo el sitio*/
     overflow: hidden;
     padding: 0 2rem;
 }
 
 .navbar {
-    border: 2px solid yellow;
     height: 60px;
     max-width: 120rem;
     margin: 0 auto;
@@ -97,7 +98,7 @@ a {
 }
 
 .navbar a:hover {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     border-bottom: 2px solid #97A699;
 }
 
@@ -117,7 +118,7 @@ a {
 .actionp_btn {
     color: #ffffff;
     padding: 0.5rem 1rem;
-    border: none; 
+    border: none;
     outline: none;
     /* border-radius: 20px; */
     font-size: 0.875rem;
@@ -143,7 +144,7 @@ a {
 /*Inicia dropdown menu*/
 
 .dropdown_menu {
-   
+
     display: none;
     position: absolute;
     right: 2rem;
@@ -162,12 +163,11 @@ a {
 .dropdown_menu.open {
     /* display: block; */
     height: 240px;
-    border: 2px solid #6cbc76;
+    
 }
 
 
 .dropdown_menu li {
-
     padding: 0.5rem;
     display: flex;
     align-items: center;
@@ -185,7 +185,7 @@ a {
 /*hero*/
 
 #hero {
-    border: 2px solid yellow;
+  
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
@@ -224,7 +224,7 @@ a {
 /* inicia acerca de mi */
 
 .about {
-    border: 2px solid yellow;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -259,14 +259,12 @@ a {
 .texto_about p {
     text-align: center;
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
-#espacio {
-    padding-top: 1rem;
+.text_subtitulo {
+    font-size: 1.5rem;
 }
-
-
 
 /* termina acerca de mi */
 
@@ -274,7 +272,7 @@ a {
 /* Inicias cards de servicios */
 
 .card {
-    border: 2px solid yellow;
+    
     max-width: 120rem;
     margin: 0 auto;
     position: relative;
@@ -388,7 +386,7 @@ a {
 /* Inicia Cintillo */
 
 .cintillo {
-    border: 2px solid yellow;
+   
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -497,7 +495,7 @@ a {
         padding: 2rem;
         max-width: 100%;
         height: 100%;
-     
+
     }
 
     .emotion {
@@ -545,7 +543,7 @@ a {
 .gal1 {
     max-width: 120rem;
     margin: 0 auto;
-    border: 2px solid yellow;
+   
 
 }
 
@@ -673,7 +671,7 @@ a {
 /* certificaciones */
 
 .certificaciones {
-    border: 2px solid yellow;
+ 
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -735,7 +733,7 @@ a {
 /* formulario de contacto */
 
 .contacto {
-    border: 2px solid yellow;
+  
     padding: 100px 15px;
     /* background-color: #f1f1f1; */
     background-color: #bad9d6;
@@ -745,13 +743,13 @@ a {
     margin: 0 auto;
 }
 
-.contacto .section-tittle {
+.contacto .section-title {
     text-align: center;
     margin-bottom: 50px;
 }
 
 
-.contacto .section-tittle h1::before {
+.contacto .section-title h1::before {
     left: 30%;
 }
 
@@ -854,16 +852,16 @@ a {
     }
 
     .contacto .contact-form {
-     border: none;
+        border: none;
     }
 
 
 
-    .contacto .section-tittle {
+    .contacto .section-title {
         padding-top: 2rem;
     }
 
-     .contacto .contact-form .form-fields {
+    .contacto .contact-form .form-fields {
         flex-direction: column;
         gap: 0rem;
     }
@@ -886,7 +884,7 @@ a {
 /* footer */
 
 footer {
-    border: 2px solid yellow;
+   
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -906,7 +904,29 @@ footer a i {
     padding-bottom: 2rem;
 }
 
+footer a:hover i {
+    color:#000000;
+}
+
 .footer__info {
     text-align: center;
     line-height: 2rem;
+}
+
+/* Estilos para el footer personal */
+.footer__personal {
+    flex-direction: row;
+    margin-top: 1rem;
+    text-align: center;
+    color: #000000; /* Ajusta el color del texto según el diseño de tu sitio */
+    font-size: 0.9rem; /* Ajusta el tamaño de la fuente según sea necesario */
+   
+}
+
+.footer__personal strong {
+    color: #ff6347; /* Color destacado para KaniCode */
+}
+
+.footer__personal a {
+    margin: 0.5rem 0; /* Espaciado entre párrafos */
 }

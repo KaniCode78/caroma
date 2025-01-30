@@ -20,6 +20,10 @@
     .texto_about p {
         font-size: 1.3rem;
     }
+
+    .text_subtitulo {
+        font-size: 1.5rem;
+    }
 }
 
 /* Ajustes para pantallas grandes */
@@ -68,7 +72,7 @@
     }
 }
 
-/* Termina Resposivo about Ajustes para pantallas medianas */
+/* TerminaResposivo about Ajustes para pantallas medianas */
 
 
 
