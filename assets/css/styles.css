@@ -76,7 +76,7 @@ a {
     background-image: url(../images/pexels-amar-14359340.jpg);
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
+
     /*fijado de fondo en todo el sitio*/
     overflow: hidden;
     padding: 0 2rem;
@@ -920,7 +920,6 @@ footer a:hover i {
     text-align: center;
     color: #000000; /* Ajusta el color del texto según el diseño de tu sitio */
     font-size: 0.9rem; /* Ajusta el tamaño de la fuente según sea necesario */
-   
 }
 
 .footer__personal strong {
