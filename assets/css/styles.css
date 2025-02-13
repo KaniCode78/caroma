@@ -939,10 +939,15 @@ footer a:hover i {
 
 /* Estilos para el footer personal */
 .footer__personal {
+    display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+   padding: auto;
     text-align: center;
-    color: #000000;
+    color: #ffffff;
+    background-color: #000000;
     /* Ajusta el color del texto según el diseño de tu sitio */
     font-size: 0.9rem;
     /* Ajusta el tamaño de la fuente según sea necesario */
@@ -950,10 +955,14 @@ footer a:hover i {
 
 .footer__personal strong {
     color: #ff6347;
+    font-size: 0.9rem;
     /* Color destacado para KaniCode */
 }
 
 .footer__personal a {
-    margin: 0.5rem 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
     /* Espaciado entre párrafos */
 }
