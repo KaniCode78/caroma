@@ -73,7 +73,7 @@ a {
 .contenedor_header {
     height: 100vh;
     background-color: #000;
-    background-image: url(../images/pexels-amar-14359340.jpg);
+    background-image: url(../images/family-6398107_1920.jpg);
     background-size: cover;
     background-position: center center;
     overflow: hidden;
@@ -178,18 +178,18 @@ a {
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     color: #000;
 }
 
 #hero h1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     height: 5rem;
-    width: 30rem;
+    width: 60rem;
     font-size: 3rem;
     margin-bottom: 1rem;
     background: rgba(255, 255, 255, 0.1);
@@ -202,10 +202,10 @@ a {
     align-items: center;
     justify-content: center;
     height: 5rem;
-    width: 30rem;
-    font-size: 1.8rem;
+    width: 60rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    width: 35rem;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* termina hero */
