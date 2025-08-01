@@ -10,3 +10,24 @@ toggleBtn.onclick = function () {
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars'
 }
+
+
+// carrousel
+
+
+  const track = document.querySelector('.carrusel-track');
+  let scrollAmount = 0;
+
+  function autoScroll() {
+    if (scrollAmount <= track.scrollWidth - track.clientWidth) {
+      track.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+      scrollAmount += 260; // ancho imagen + gap
+    } else {
+      scrollAmount = 0;
+    }
+  }
+
+  setInterval(autoScroll, 3000); // cada 3 segundosDa
