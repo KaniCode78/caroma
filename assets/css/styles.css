@@ -11,7 +11,7 @@
   --primary-color: #a58bdb;
   --secondary-color: #72e1f4;
   --tertiary-color: #bad9d6;
-  --fondo1: rgba(114, 225, 244, 0.5);
+  --fondo1: rgba(18, 202, 239, 0.5);
 }
 
 html {
@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--fuentePrincipal);
-  background-color: #72e1f4;
+  /* background-color: var(--fondo1); */
 }
 
 li,
