@@ -15,9 +15,14 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/social_fixed.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
   <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="stylesheet" href="./assets/css/carrousel.css">
   <link rel="stylesheet" href="./assets/css/cards2.css">
+  <link rel="stylesheet" href="./assets/css/cintillo.css">
+  <link rel="stylesheet" href="./assets/css/about.css">
+
 
 
 </head>
@@ -95,7 +100,7 @@
 
     <!-- Inicia Carrousel -->
 
-    <div>
+    <div class="contenedor">
       <h3 class="subtitulo">Cuento con respaldo de los grandes,</br> para construir el futuro que sueñas.</h3>
 
       <div class="carrusel-infinito">
@@ -124,42 +129,56 @@
 
 
 
+<article class="about contenedor" id="About">
+  <!-- Columna de texto -->
+  <div class="texto_about">
+    <h1>Soy Jessica Abrego</h1>
 
-    <article class="about contenedor" id="About">
+    <h3 class="text_subtitulo text-center">
+      <strong>Economista. Agente de Seguros certificada. Instructora de yoga.
+        Mamá feliz.</strong>
+    </h3>
 
-      <div class="texto_about">
-        <h2>Soy Jessica Abrego</h2>
-        <br />
-        <h3 class="text_subtitulo text-center "> <strong>Economista. Agente de Seguros certificada. Instructora de yoga.
-            Mamá feliz.</strong>
-        </h3>
-        <p>Con más de 10 años de experiencia combinando el mundo financiero con el bienestar emocional, descubrí que
-          proteger lo que más valoramos —nuestra salud, nuestro patrimonio y nuestra tranquilidad— es posible con un
-          enfoque integral.
-        </p>
-        <h3>🌱 Una historia de equilibrio</h3>
-        <P>Durante mi trayectoria he logrado unir dos grandes pasiones:</P>
+    <!-- Intro / lead -->
+    <p class="lead">
+      Con más de 10 años de experiencia combinando el mundo financiero con el bienestar emocional, descubrí que
+      proteger lo que más valoramos —nuestra salud, nuestro patrimonio y nuestra tranquilidad— es posible con un
+      enfoque integral.
+    </p>
 
-        <p>🧘‍♀️ El yoga, que me ayuda a cultivar la calma y la atención plena.</p>
-        <p>💼 Y el asesoramiento financiero, que brinda seguridad, estructura y futuro. </p>
+    <hr class="divider" />
 
-        <p>Esta combinación me permite ofrecerte un acompañamiento diferente:</p>
+    <!-- Sección historia -->
+    <h2>🌱 Una historia de equilibrio</h2>
+    <p>Durante mi trayectoria he logrado unir dos grandes pasiones:</p>
 
-        <p>✔️ Con empatía y escucha activa.</p>
-        <p>✔️ Con herramientas financieras claras.</p>
-        <p>✔️ Y con una visión holística de tu bienestar.</p>
+    <!-- Dos columnas: yoga / finanzas -->
+    <div class="two-col">
+      <p>🧘‍♀️ El yoga, que me ayuda a cultivar la calma y la atención plena.</p>
+      <p>💼 Y el asesoramiento financiero, que brinda seguridad, estructura y futuro. </p>
+    </div>
 
-        <p>Hoy, como agente de seguros, mi misión es ofrecerte soluciones personalizadas que te brinden la seguridad que
-          necesitas para disfrutar de la vida al máximo.</p>
-      </div>
+    <!-- Lista de diferenciadores -->
+    <h2>Esta combinación me permite ofrecerte un acompañamiento diferente:</h2>
+    <ul class="checklist" role="list">
+      <li>✔️ Con empatía y escucha activa.</li>
+      <li>✔️ Con herramientas financieras claras.</li>
+      <li>✔️ Y con una visión holística de tu bienestar.</li>
+    </ul>
 
-      <div class="imagen-hover-con-borde">
-        <img src="./assets/images/jessia2fix.png" alt="Jess" class="imagen-principal">
-        <img src="./assets/images/image02_1.png" alt="Logo Dile Jess a tu futuro" class="imagen-secundaria">
-      </div>
+    <!-- Cierre -->
+    <p class="closing">
+      Hoy, como agente de seguros, mi misión es ofrecerte soluciones personalizadas que te brinden la seguridad que
+      necesitas para disfrutar de la vida al máximo.
+    </p>
+  </div>
 
-
-    </article>
+  <!-- Columna de imagen (card con hover/logo) -->
+  <div class="imagen-hover-con-borde">
+    <img src="./assets/images/jessia2fix.png" alt="Jess" class="imagen-principal">
+    <img src="./assets/images/logojess.png" alt="Logo Dile Jess a tu futuro" class="imagen-secundaria">
+  </div>
+</article>
 
 
   </main>
@@ -168,12 +187,13 @@
 
   <!-- Card Servicios -->
 
-  <div>
-    <h2>Mis Servicios</h2>
-  </div>
 
 
-  <section class="card-grid">
+
+  <section class="card-grid ">
+    <div>
+      <h2>Lo que ofrezco para asegurar tu futuro</h2>
+    </div>
     <!-- Card 1 -->
     <div class="card">
       <div class="card-inner">
@@ -185,10 +205,11 @@
           <h3>Modalidad 40 </h3>
         </div>
         <div class="card-back">
-          <p>Con mi asesoría personalizada en Modalidad 40, te ayudo a aumentar tu pensión del IMSS y a tomar decisiones inteligentes para tu futuro.</p>
+          <p>Con mi asesoría personalizada en Modalidad 40, te ayudo a aumentar tu pensión del IMSS y a tomar decisiones
+            inteligentes para tu futuro.</p>
           <p>Asegura un retiro sin preocupaciones.</p>
           <a href="https://wa.me/5215515105853?text=Hola%20Jess%2C%20quiero%20decirle%20si%20a%20mi%20futuro%20%C2%BFme%20ayudas%3F"
-          target="_blank" rel="noopener noreferrer" aria-label="Enlace Whatsapp" class="btn">
+            target="_blank" rel="noopener noreferrer" aria-label="Enlace Whatsapp" class="btn">
             ¡Agenda tu asesoría y construye la pensión que mereces! <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -276,20 +297,43 @@
 
   <section class="cintillo contenedor">
 
-    <div class="texto-cintillo">
-      <h4>Disfruta, Viaja y Diviértete como Nunca </h4>
-      <p>Viajar siempre es divertido y con una ruta planeada lo hace inolvidable</p>
-    </div>
-    <div class="button">
-      <a href="https://wa.me/9982910054" target="_blank" rel="noopener noreferrer" aria-label="Enlace Whatsapp">ASESORIA
-        PERSONALIZADA</a>
-    </div>
+    <div class="wrap">
+      <section class="why" aria-label="Why Choose Us">
+        <h2 class="title">¿Por que con Jess?</h2>
+        <p class="lede">
+          Whether it’s your home, office, or rental property — we make your space sparkle.
+        </p>
 
-    <div class="emotion">
-      <img src="./assets/images/gal_cintillo/alberca.svg" alt="alberca">
-      <img src="./assets/images/gal_cintillo/auti.svg" alt="auto">
-      <img src="./assets/images/gal_cintillo/edificio.svg" alt="hoteles">
-      <img src="./assets/images/gal_cintillo/playa.svg" alt="playa">
+        <!-- Izquierda: tarjeta grande -->
+        <article class="card card--hero" aria-label="Trusted Professionals">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop"
+            alt="Cleaner working on large glass windows" />
+          <div class="card__content">
+            <h3>Trusted Professionals</h3>
+            <p>Background-checked, insured, and trained cleaners.</p>
+          </div>
+        </article>
+
+        <!-- Derecha: tarjeta superior -->
+        <article class="card card--eco" aria-label="Eco-Friendly Products">
+          <img src="https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?q=80&w=1600&auto=format&fit=crop"
+            alt="Gloved hands spraying eco cleaner on a desk" />
+          <div class="card__content">
+            <h3>Eco-Friendly Products</h3>
+            <p>Safe for kids, pets, and the planet.</p>
+          </div>
+        </article>
+
+        <!-- Derecha: tarjeta inferior -->
+        <article class="card card--flex" aria-label="Flexible Scheduling">
+          <img src="https://images.unsplash.com/photo-1585432959449-b1c88a8e75a0?q=80&w=1600&auto=format&fit=crop"
+            alt="Squeegee cleaning a window" />
+          <div class="card__content">
+            <h3>Flexible Scheduling</h3>
+            <p>Weekly, bi-weekly, monthly, or one-time cleanings.</p>
+          </div>
+        </article>
+      </section>
     </div>
 
   </section>
@@ -299,7 +343,7 @@
 
 
   <!-- Galeria -->
-  
+
 
   <!-- Termina Galeria -->
 

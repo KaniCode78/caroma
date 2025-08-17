@@ -1,99 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cards Flip</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/cards2.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soy Jessica Abrego</title>
+  <!-- Fuente limpia (opcional). Puedes quitarla si prefieres sistema) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/about.css" />
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <section class="card-grid">
-    <!-- Card 1 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="./assets/images/cards/ahorro.png" alt="Ahorro">
-          <h3>Seguro de Ahorro</h3>
-        </div>
-        <div class="card-back">
-          <p>Planifica tu futuro con un seguro de ahorro flexible y confiable.</p>
-          <a href="#" class="btn">Conoce más</a>
-        </div>
+  <main id="contenido" class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__copy">
+        <h1 class="hero__title">Soy Jessica Abrego</h1>
+
+        <p class="hero__subtitle">
+          Economista. Agente de Seguros certificada. Instructora de yoga. Mamá feliz.
+        </p>
+
+        <p class="lead">
+          Con más de 10 años de experiencia combinando el mundo financiero con el bienestar emocional, descubrí que proteger lo que más valoramos —nuestra salud, nuestro patrimonio y nuestra tranquilidad— es posible con un enfoque integral.
+        </p>
       </div>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="./assets/images/cards/auto.png" alt="Auto">
-          <h3>Seguro de Auto</h3>
-        </div>
-        <div class="card-back">
-          <p>Protege tu vehículo contra cualquier imprevisto en el camino.</p>
-          <a href="#" class="btn">Cotizar ahora</a>
-        </div>
+      <figure class="hero__media">
+        <!-- Reemplaza src por tu imagen real -->
+        <img src="jessica.jpg" alt="Retrato de Jessica Abrego sonriendo" />
+      </figure>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- HISTORIA -->
+    <section class="section">
+      <h2 class="section__title">🌱 Una historia de equilibrio</h2>
+
+      <p class="section__intro">
+        Durante mi trayectoria he logrado unir dos grandes pasiones:
+      </p>
+
+      <div class="two-col">
+        <p class="pill">🧘‍♀️ El yoga, que me ayuda a cultivar la calma y la atención plena.</p>
+        <p class="pill">💼 Y el asesoramiento financiero, que brinda seguridad, estructura y futuro.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- Card 3 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="./assets/images/cards/educativo.png" alt="Educación">
-          <h3>Fondo Educativo</h3>
-        </div>
-        <div class="card-back">
-          <p>Invierte hoy en el futuro académico de tus hijos.</p>
-          <a href="#" class="btn">Simula tu plan</a>
-        </div>
-      </div>
-    </div>
+    <!-- DIFERENCIADORES -->
+    <section class="section">
+      <h2 class="section__title">Esta combinación me permite ofrecerte un acompañamiento diferente:</h2>
 
-    <!-- Card 4 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="./assets/images/cards/empresas.png" alt="Empresas">
-          <h3>Seguro Empresarial</h3>
-        </div>
-        <div class="card-back">
-          <p>Respalda tu negocio con coberturas hechas a tu medida.</p>
-          <a href="#" class="btn">Solicitar asesoría</a>
-        </div>
-      </div>
-    </div>
+      <ul class="checklist" role="list">
+        <li>✔️ Con empatía y escucha activa.</li>
+        <li>✔️ Con herramientas financieras claras.</li>
+        <li>✔️ Y con una visión holística de tu bienestar.</li>
+      </ul>
+    </section>
 
-    <!-- Card 5 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="./assets/images/cards/mayores.png" alt="Mayores">
-          <h3>Gastos Médicos Mayores</h3>
-        </div>
-        <div class="card-back">
-          <p>Cubre emergencias médicas con atención nacional e internacional.</p>
-          <a href="#" class="btn">Ver opciones</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="./assets/images/cards/retiro.png" alt="Retiro">
-          <h3>Plan de Retiro</h3>
-        </div>
-        <div class="card-back">
-          <p>Construye una jubilación digna y tranquila desde hoy.</p>
-          <a href="#" class="btn">Comienza ahora</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
+    <!-- CIERRE -->
+    <section class="section section--closing">
+      <p class="closing">
+        Hoy, como agente de seguros, mi misión es ofrecerte soluciones personalizadas que te brinden la seguridad que necesitas para disfrutar de la vida al máximo.
+      </p>
+    </section>
+  </main>
 </body>
 </html>

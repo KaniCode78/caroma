@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --fuentePrincipal: "Montserrat", sans-serif;
+  --surface-color: #fff;
+  --white: #ffffff;
+  --black: #000000;
+  --dark-color: #2f6c73;
+  --light-color: #e5edf5;
+  --curve: 40;
+  --primary-color: #a58bdb;
+  --secondary-color: #72e1f4;
+  --tertiary-color: #bad9d6;
+  --fondo1: rgba(18, 202, 239, 0.5);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: var(--primary-color); */
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuentePrincipal);
+  /* background-color: var(--fondo1); */
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/* Inicia fixed */
+
+/* Fixed de redes sociales */
+
+.page {
+  position: fixed;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.box__wasa {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+.logo__fix {
+  bottom: 0;
+  left: 0;
+  right: 5px;
+  height: 38px;
+  width: 38px;
+}
+
+/* Fixed de redes sociales */
