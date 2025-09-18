@@ -2,13 +2,14 @@
 
 /* imagen de fondo */
 .contenedor_header {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--primary-color);
   background-image: url(../images/family-6398107_1920.jpg);
-  background-size: cover;
+  background-size: cover no-repeat;
   background-position: center center;
   overflow: hidden;
   padding: 0 2rem;
+
 }
 
 .contenedor_header {
@@ -96,21 +97,27 @@
 
 /*hero*/
 
-#hero {
+.hero {
   height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+
   /* ← Alineación a la izquierda */
   color: var(--white);
   gap: 0.5rem;
   /* Espacio controlado entre elementos */
   padding-left: 1rem;
   /* Opcional: un pequeño margen interno */
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  /* ocupa toda la pantalla */
+  padding: 0 2rem;
+  /* margen lateral en móviles */
 }
 
-#hero h1 {
+.hero h1 {
   font-family: var(--fuentePrincipal);
   font-size: 2.5rem;
   /* Ajusta según tu diseño */
@@ -119,13 +126,42 @@
   text-align: left;
 }
 
-#hero p {
+.hero p {
   font-family: var(--fuentePrincipal);
   font-size: 1.5rem;
   font-weight: 400;
   margin: 0;
   text-align: left;
 }
+
+
+.hero::before {
+  /* capa para contraste */
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+  min-height: 100vh;
+}
+
+#hero-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.40);
+  color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+
+#hero-content h1,
+#hero-content p {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+
 
 /*Animacion Boton*/
 
