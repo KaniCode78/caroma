@@ -1,63 +1,139 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* ====== Partners / Marcas ====== */
+.partners {
+  padding: 2.5rem 0 1.5rem;
+  text-align:center
 }
 
-
-
-
-.subtitulo {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 1rem;
-    font-weight: lighter;
-    padding-top: 2rem;
+.partners__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-
-.carrusel-slide img {
-    max-height: 60px;
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    flex-shrink: 0;
-    border-radius: 8px;
+.partners__title {
+  text-align: center;
+  color: #184b50;                 /* tono cercano a tu paleta */
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: clamp(1.4rem, 1rem + 2vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+.partners__title span {
+  display: block;                  /* fuerza salto de línea del subtítulo */
 }
 
-.carrusel-infinito {
-    height: 240px;
-    /* ligeramente más alto que las imágenes */
-    overflow: hidden;
-    /* background: linear-gradient(135deg, #a58bdb, #72e1f4); */
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
+/* Carrusel infinito */
+.partners__marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 0;
 }
 
-
-.carrusel-slide {
+.partners__track {
   display: flex;
-  gap: 5rem;
-  animation: scrollCarrusel 30s linear infinite;
-  width: max-content;
-  align-items: center; /* Alinea imágenes verticalmente */
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  width: max-content;              /* ancho según contenido */
+  animation: partners-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+/* Pausa animación al hover (mejor UX) */
+.partners__marquee:hover .partners__track {
+  animation-play-state: paused;
+}
+
+/* Ítems / logos */
+.partners__item {
+  flex: 0 0 auto;
+}
+.partners__item img {
+  height: clamp(38px, 6vw, 68px);  /* responsivo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  opacity: 0.95;
+}
+
+/* Animación (duplicas el lote en el HTML para el bucle) */
+@keyframes partners-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Accesibilidad: respetar usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .partners__track {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 600px) {
+  .partners {
+    padding: 2rem 0 1rem;
+  }
+  .partners__title {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* ====== Modo Glassmorphism ====== */
+/* Actívalo poniendo .partners--glass en el <section> */
+.partners--glass .partners__marquee{
+  background: rgba(255,255,255,0.28);          /* capa translúcida */
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  backdrop-filter: blur(14px) saturate(120%);  /* desenfoque + punch */
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+  padding: 0.85rem 1rem;                       /* un poco más de aire */
+}
+
+/* Fade suave en los laterales para “integrar” el carrusel */
+.partners--glass .partners__marquee{
+  /* máscara de desvanecido (soporta WebKit y navegadores modernos) */
+  -webkit-mask-image: linear-gradient(to right,
+    transparent 0%, rgba(0,0,0,0.6) 6%, #000 14%, #000 86%, rgba(0,0,0,0.6) 94%, transparent 100%);
+          mask-image: linear-gradient(to right,
+    transparent 0%, rgba(0,0,0,0.6) 6%, #000 14%, #000 86%, rgba(0,0,0,0.6) 94%, transparent 100%);
+}
+
+/* Ajuste leve para que los logos respiren dentro del marco glass */
+.partners--glass .partners__track{
+  gap: clamp(2rem, 6vw, 4.5rem);
+}
+
+/* Modo oscuro opcional (si tu fondo es muy oscuro) */
+@media (prefers-color-scheme: dark){
+  .partners--glass .partners__marquee{
+    background: rgba(18,18,18,0.35);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  }
 }
 
 
+/* ====== Glassmorphism para el título ====== */
+.partners__title--glass {
+  display: inline-block;                 /* para que el fondo se ajuste al texto */
+  background: rgba(255,255,255,0.28);     /* capa translúcida */
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 16px;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  color: #184b50;                         /* contrasta bien con el fondo */
+  margin-inline: auto;                     /* centrado horizontal */
+}
 
-/* Animación infinita */
-@keyframes scrollCarrusel {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+/* Oscuro automático si el sistema está en dark mode */
+@media (prefers-color-scheme: dark){
+  .partners__title--glass {
+    background: rgba(18,18,18,0.35);
+    border-color: rgba(255,255,255,0.25);
+    color: #f0f0f0;
+  }
 }
