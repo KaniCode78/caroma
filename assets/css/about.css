@@ -1,26 +1,30 @@
-/* ====== Sección About (ajustada a tus variables) ====== */
-.about{
-  /* de flex -> grid para mejor control del layout */
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(16px, 4vw, 40px);
-  align-items: start;
+/* ====== About (layout y tipografía) ====== */
+.about {
   padding: clamp(16px, 4vw, 32px) 0;
-  max-width: min(1100px, 92vw);
-  margin-inline: auto;
-  font-family: var(--fuentePrincipal);
   color: var(--black);
+  font-family: var(--fuentePrincipal);
 }
 
-.texto_about{
+.about__container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-areas:
+    "copy media";
+  gap: clamp(16px, 4vw, 40px);
+  align-items: start;
+  max-width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+.about__content { 
+  grid-area: copy; 
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-width: 680px; /* ancho óptimo de lectura */
+  max-width: 680px;           /* ancho óptimo de lectura */
 }
 
-/* Jerarquía tipográfica */
-.texto_about h1{
+.about__title {
   margin: 0;
   font-weight: 800;
   font-size: clamp(32px, 6vw, 56px);
@@ -29,108 +33,70 @@
   color: var(--black);
 }
 
-.texto_about h2{
-  margin: 16px 0 8px;
-  font-weight: 700;
-  font-size: clamp(22px, 3vw, 28px);
-  color: var(--primary-color);
-}
-
-.texto_about h3{
+.about__subtitle {
   margin: 4px 0 8px;
   font-weight: 600;
   font-size: clamp(18px, 2.5vw, 22px);
   color: var(--secondary-color);
 }
 
-/* Forzamos lectura alineada a la izquierda (aunque llegue .text-center) */
-.texto_about :is(h1,h2,h3,p,ul){ text-align: left !important; }
-
-/* Párrafos */
-.texto_about p{
+.about__lead {
   margin: 0 0 12px;
-  font-size: clamp(16px, 1.6vw, 18px);
-  line-height: 1.65;
-  color: var(--dark-color); /* buen contraste sobre blanco */
-}
-
-.texto_about .lead{
-  color: var(--black);
   font-size: clamp(18px, 1.9vw, 20px);
-  max-width: 65ch; /* 60–75 caracteres por línea */
+  line-height: 1.65;
+  color: var(--black);
+  max-width: 65ch;            /* 60–75 caracteres por línea */
 }
 
-/* Divisor sutil */
-.divider{
+.about__divider {
   border: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,0.08),
-    rgba(0,0,0,0.02) 30%,
-    rgba(0,0,0,0.08)
-  );
+  background: linear-gradient(90deg, rgba(0,0,0,0.08), rgba(0,0,0,0.02) 30%, rgba(0,0,0,0.08));
   margin: clamp(12px, 3vw, 24px) 0;
 }
 
+.about__section-title {
+  margin: 16px 0 8px;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 28px);
+  color: var(--primary-color);
+}
+
 /* Dos columnas para Yoga / Finanzas */
-.two-col{
+.about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px 16px;
   max-width: 900px;
 }
 
-/* Checklist (manteniendo el copy exacto) */
-.checklist{
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0;
-  display: grid;
-  gap: 10px;
-  max-width: 700px;
-}
-.checklist li{
-  background: var(--white);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 12px;
-  padding: 12px 14px;
-  color: var(--black);
-  box-shadow: 0 8px 24px rgba(16,24,40,0.08);
-}
-
-/* Cierre / remate */
-.closing{
-  max-width: 65ch;
-  font-weight: 600;
-  color: var(--black);
-  margin-top: clamp(12px, 3vw, 24px);
-}
-
-/* ====== Card de imagen con hover/logo (se conserva tu efecto) ====== */
-.imagen-hover-con-borde{
+/* ====== Media (tarjeta con efecto hover + logo/badge) ====== */
+.about__media {
+  grid-area: media;
   position: relative;
   width: min(520px, 100%);
-  aspect-ratio: 4 / 5;     /* responsivo en lugar de altura fija */
+  aspect-ratio: 4 / 5; /* responsivo */
   padding: 5px;
   border-radius: 16px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   overflow: hidden;
+  margin: 0;                 /* reset <figure> */
+  justify-self: center;      /* centrar en su columna */
   cursor: pointer;
-  justify-self: center;    /* centra la tarjeta en su columna */
 }
 
-.imagen-hover-con-borde img{
+.about__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
   border-radius: 12px;
-  transition: filter 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+  object-fit: cover;
+  transition: filter .5s ease, transform .5s ease, opacity .5s ease;
 }
 
-/* Logo (imagen secundaria) oculto al inicio */
-.imagen-hover-con-borde .imagen-secundaria{
+.about__image--primary { object-fit: cover; }
+
+.about__image--badge {
   position: absolute;
   inset: 5px;
   object-fit: contain;
@@ -142,77 +108,114 @@
 }
 
 /* Hover: blur + zoom + aparición del logo */
-.imagen-hover-con-borde:hover .imagen-principal{
+.about__media:hover .about__image--primary {
   filter: blur(4px);
   transform: scale(1.05);
 }
-.imagen-hover-con-borde:hover .imagen-secundaria{
-  opacity: 1;
+.about__media:hover .about__image--badge { opacity: 1; }
+
+/* Respeto a reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .about__image { transition: none; }
+  .about__media:hover .about__image--primary { filter: none; transform: none; }
+  .about__media:hover .about__image--badge { opacity: 1; }
 }
 
-/* ====== Responsivo ====== */
-@media (max-width: 900px){
-  .about{ grid-template-columns: 1fr; }
-  .imagen-hover-con-borde{ order: -1; } /* foto arriba en móvil */
-  .two-col{ grid-template-columns: 1fr; }
-}
-
-/* Grid con área full-width para el bloque inferior */
-.about{
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  grid-template-areas:
-    "copy media"
-    "wide wide";
-  gap: clamp(16px, 4vw, 40px);
-  align-items: start;
-  padding: clamp(16px, 4vw, 32px) 0;
-  width: 100%; /* que use todo el ancho del .contenedor */
-}
-
-.texto_about{ grid-area: copy; }
-.imagen-hover-con-borde{ grid-area: media; }
-.about__wide{
-  grid-area: wide;            /* ocupa ambas columnas */
+/* ====== Bloque ancho inferior ====== */
+.about__wide {
+  grid-column: 1 / -1;       /* ocupa ambas columnas */
   margin-top: clamp(12px, 3vw, 24px);
+  max-width: min(1100px, 92vw);
+  margin-inline: auto;
 }
 
-/* La checklist y el cierre ocupan todo el ancho disponible en este bloque */
-.about__wide .checklist{ max-width: none; width: 100%; }
-.about__wide .closing{ max-width: none; }
-
-/* Mantén el estilo previo del flip card */
-.imagen-hover-con-borde{
-  position: relative;
-  width: min(520px, 100%);
-  aspect-ratio: 4 / 5;
-  padding: 5px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  overflow: hidden;
-  cursor: pointer;
-  justify-self: center;
+.about__wide-title {
+  font-size: clamp(20px, 2.4vw, 26px);
+  color: var(--primary-color);
+  margin: 0 0 12px;
 }
-.imagen-hover-con-borde img{
-  width: 100%; height: 100%; object-fit: cover; display: block;
+
+.about__checklist {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.about__checklist li {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
-  transition: filter .5s ease, transform .5s ease, opacity .5s ease;
+  padding: 12px 14px;
+  color: var(--black);
+  box-shadow: 0 8px 24px rgba(16,24,40,0.08);
 }
-.imagen-hover-con-borde .imagen-secundaria{
-  position: absolute; inset: 5px; object-fit: contain;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  border-radius: 12px; opacity: 0; z-index: 2; pointer-events: none;
-}
-.imagen-hover-con-borde:hover .imagen-principal{ filter: blur(4px); transform: scale(1.05); }
-.imagen-hover-con-borde:hover .imagen-secundaria{ opacity: 1; }
 
-/* Responsivo: apila todo y mantiene orden foto -> texto -> wide */
-@media (max-width: 900px){
-  .about{
+.about__closing {
+  font-weight: 600;
+  color: var(--black);
+  margin-top: clamp(12px, 3vw, 24px);
+  max-width: 65ch;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .about__container {
     grid-template-columns: 1fr;
     grid-template-areas:
       "media"
-      "copy"
-      "wide";
+      "copy";
+  }
+  .about__grid { grid-template-columns: 1fr; }
+}
+
+/* ====== Variante opcional: Glassmorphism para el bloque ancho ======
+   Actívala agregando .about__wide--glass junto a .about__wide en el HTML */
+.about__wide--glass {
+  background: rgba(255,255,255,0.28);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  backdrop-filter: blur(14px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  padding: clamp(12px, 2.4vw, 18px);
+}
+@media (prefers-color-scheme: dark) {
+  .about__wide--glass {
+    background: rgba(18,18,18,0.35);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  }
+}
+
+/* ====== Glassmorphism + halo para la tarjeta de imagen ====== */
+.about__media--glass {
+  background: rgba(255,255,255,0.25);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  backdrop-filter: blur(16px) saturate(130%);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18),
+              0 0 0 2px rgba(255,255,255,0.12) inset;
+}
+
+/* Halo suave alrededor del logo cuando aparece */
+.about__media--glass .about__image--badge {
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.5))
+          drop-shadow(0 0 24px rgba(114,225,244,0.35));
+  transition: opacity .5s ease, filter .5s ease;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .about__media--glass {
+    background: rgba(18,18,18,0.35);
+    border-color: rgba(255,255,255,0.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35),
+                0 0 0 2px rgba(255,255,255,0.08) inset;
+  }
+  .about__media--glass .about__image--badge {
+    filter: drop-shadow(0 0 12px rgba(114,225,244,0.6))
+            drop-shadow(0 0 28px rgba(114,225,244,0.4));
   }
 }
