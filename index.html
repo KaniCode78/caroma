@@ -4,11 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/93e19d243d.js" crossorigin="anonymous"></script>
   <title>Dile Jess a tu Futuro</title>
-  <!-- ======= SEO & Social Meta ======= -->
-  <link rel="canonical" href="https://dilejess.netlify.app/">
 
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Iconos (solo CSS, sin kit JS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Canonical + SEO -->
+  <link rel="canonical" href="https://dilejess.netlify.app/">
   <meta name="description"
     content="Protege tu patrimonio y tu tranquilidad con asesoría de seguros certificada. Agenda tu cita y descubre cómo cuidar tu futuro.">
 
@@ -27,13 +33,10 @@
   <meta name="twitter:description"
     content="Protege tu patrimonio y tu tranquilidad con asesoría de seguros certificada.">
   <meta name="twitter:image" content="https://dilejess.netlify.app/assets/images/og-cover.jpg">
-  <!-- ======= /SEO & Social Meta ======= -->
 
-  <meta name="description"
-    content="Descubre la mejor experiencia de viaje con nuestra agencia especializada en diseñar vacaciones a tu medida. Hospedajes, tours, renta de vehículos y transporte, todo en un solo lugar. ¡Planea tu aventura hoy!">
   <link rel="icon" href="./assets/images/corazon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Tus CSS -->
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <link rel="stylesheet" href="./assets/css/social_fixed.css" />
   <link rel="stylesheet" href="./assets/css/carrousel.css" />
@@ -46,6 +49,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
   <!-- Fix Redes Sociales -->
   <div class="page">
     <div class="box__wasa">
@@ -70,6 +74,7 @@
   <!-- Fix Redes Sociales -->
 
   <!-- Header -->
+   
   <header class="contenedor_header" id="Home">
     <div class="navbar">
       <div class="logo">
@@ -81,8 +86,8 @@
         <li><a href="#About" aria-label="Menu acerca de">Acerca de</a></li>
         <li><a href="#Services" aria-label="Menu servicios">Servicios</a></li>
         <li>
-          <a href="https://wa.me/9982910054" target="_blank" rel="noopener noreferrer"
-            aria-label="Enlace Whatsapp">Asesoría</a>
+          <a href="https://wa.me/5215515105853?text=Hola%20Jess%2C%20quiero%20decirle%20si%20a%20mi%20futuro%20%C2%BFme%20ayudas%3F"
+            target="_blank" rel="noopener noreferrer" aria-label="Enlace Whatsapp">Asesoría</a>
         </li>
       </ul>
 
@@ -100,8 +105,8 @@
         <li><a href="#About" aria-label="Menu acerca de">Acerca de</a></li>
         <li><a href="#Services" aria-label="Menu servicios">Servicios</a></li>
         <li>
-          <a href="https://wa.me/9982910054" target="_blank" rel="noopener noreferrer"
-            aria-label="Enlace Whatsapp">Asesoría</a>
+          <a href="https://wa.me/5215515105853?text=Hola%20Jess%2C%20quiero%20decirle%20si%20a%20mi%20futuro%20%C2%BFme%20ayudas%3F"
+            target="_blank" rel="noopener noreferrer" aria-label="Enlace Whatsapp">Asesoría</a>
         </li>
         <li>
           <a href="./assets/plantilla/plantilla.xlsx" class="actionp_btn" aria-label="descargar plantilla">Descargar
@@ -283,10 +288,12 @@
 
         <!-- Columna imagen -->
         <figure class="about__media about__media--glass">
+          <!-- About -->
           <img src="./assets/images/jessia2fix.png" alt="Retrato de Jessica Abrego"
-            class="about__image about__image--primary" loading="lazy" decoding="async">
+            class="about__image about__image--primary" width="840" height="1050" loading="lazy" decoding="async">
+
           <img src="./assets/images/logojess.png" alt="Logo de Dile Jess a tu Futuro"
-            class="about__image about__image--badge" loading="lazy" decoding="async">
+            class="about__image about__image--badge" width="600" height="600" loading="lazy" decoding="async">
         </figure>
       </div>
 
@@ -497,7 +504,7 @@
         <ul class="site-footer__list">
           <li><span>Correo</span> <a href="mailto:contacto@dilejessatufuturo.com">contacto@dilejessatufuturo.com</a>
           </li>
-          <li><span>Teléfono</span> <a href="tel:+529985551010">+52 998 555 1010</a></li>
+          <li><span>Teléfono</span> <a href="tel:+52 55 1510 5853">+52 998 555 1010</a></li>
           <li><span>Horario</span> Lun–Vie 9am–6pm</li>
         </ul>
       </div>
@@ -538,22 +545,29 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
-  <script src="./assets/js/nav.js"></script>
+  <script src="./assets/js/nav.js" defer></script>
   <script src="./assets/js/services-flip.js" defer></script>
 
   <!-- SEO JSON-LD -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "InsuranceAgency",
-    "name": "Dile Jess a tu Futuro",
-    "image": "https://tu-dominio.com/assets/images/logojess.png",
-    "url": "https://tu-dominio.com",
-    "email": "contacto@dilejessatufuturo.com",
-    "telephone": "+52 0000 0000",
-    "areaServed": "MX",
-    "founder": "Jessica Abrego"
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Dile Jess a tu Futuro",
+  "image": "https://dilejess.netlify.app/assets/images/logojess.png",
+  "url": "https://dilejess.netlify.app/",
+  "email": "contacto@dilejessatufuturo.com",
+  "telephone": "+52 998 555 1010",
+  "areaServed": "MX",
+  "founder": "Jessica Abrego",
+  "sameAs": [
+    "https://www.instagram.com/jessicabrego/",
+    "https://www.facebook.com/jessica.abrego.18",
+    "https://www.tiktok.com/@jessicabrego",
+    "https://wa.me/5215515105853"
+  ]
   }
+  </script>
   </script>
 </body>
 
