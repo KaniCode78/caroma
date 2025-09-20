@@ -321,88 +321,171 @@
 /* ================= Harmonía cierre + footer (paleta lavanda/celeste) ================ */
 
 /* 1) Ondas: flush, sin saltos y con lavanda más presente */
-.closing-cta { 
-  background:#fff; 
-  margin: 0; 
-  padding-bottom: 0;          /* no empuja la onda inferior */
+.closing-cta {
+    background: #fff;
+    margin: 0;
+    padding-bottom: 0;
+    /* no empuja la onda inferior */
 }
-.closing-cta__wave { line-height: 0; height: 92px; }
-.closing-cta__wave svg { width: 100%; height: 100%; display: block; }
+
+.closing-cta__wave {
+    line-height: 0;
+    height: 92px;
+}
+
+.closing-cta__wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .closing-cta__wave--top path,
 .closing-cta__wave--bottom path {
-  fill: var(--primary-color, #a58bdb);
-  opacity: .50;               /* más visible que .35 */
+    fill: var(--primary-color, #a58bdb);
+    opacity: .50;
+    /* más visible que .35 */
 }
 
 /* 2) CTA: usa lavanda (no teal) para el gradiente y el borde */
-.closing-cta__button{
-  background: linear-gradient(90deg, rgba(165,139,219,.75), rgba(165,139,219,0));
-  border-color: rgba(165,139,219,.65);
-  color:#fff;
+.closing-cta__button {
+    background: linear-gradient(90deg, rgba(165, 139, 219, .75), rgba(165, 139, 219, 0));
+    border-color: rgba(165, 139, 219, .65);
+    color: #fff;
 }
 
+
+
+.closing-cta {
+    background: #fff;
+    margin: 0;
+    padding-bottom: 0
+}
+
+.closing-cta__wave {
+    line-height: 0;
+    height: 92px
+}
+
+.closing-cta__wave svg {
+    width: 100%;
+    height: 100%;
+    display: block
+}
+
+.closing-cta__wave--top path,
+.closing-cta__wave--bottom path {
+    fill: #a58bdb;
+    opacity: .5
+}
+
+.site-footer {
+    background: #111218;
+    color: #e9eef2;
+    border-top: 4px solid rgba(165, 139, 219, .55);
+    margin-top: -2px
+}
+
+.site-footer__social a {
+    background: rgba(165, 139, 219, .14);
+    border: 1px solid rgba(165, 139, 219, .55);
+    color: #e9eef2
+}
+
+
+
+
 /* 3) Imagen CTA: integración suave, sin tinte verdoso */
-.closing-cta__media img{
-  border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+.closing-cta__media img {
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+}
+.closing-cta__button{
+  background:linear-gradient(90deg, rgba(165,139,219,.75), rgba(165,139,219,0));
+  border:2px solid rgba(165,139,219,.65);
+  color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25)
 }
 
 /* 4) Footer: fuera el verde; fondo neutro profundo + acentos lavanda */
-:root{
-  --footer-bg: #111218;       /* gris-neutro muy oscuro (sin matiz verde) */
-  --footer-text: #e9eef2;
-  --footer-link: #e9eef2;
-  --footer-link-hover: #cfd8ff; /* toque frío que combina con lavanda */
-  --footer-accent: rgba(165,139,219,.55); /* lavanda para líneas y pills */
+:root {
+    --footer-bg: #111218;
+    /* gris-neutro muy oscuro (sin matiz verde) */
+    --footer-text: #e9eef2;
+    --footer-link: #e9eef2;
+    --footer-link-hover: #cfd8ff;
+    /* toque frío que combina con lavanda */
+    --footer-accent: rgba(165, 139, 219, .55);
+    /* lavanda para líneas y pills */
 }
 
-.site-footer{
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  border-top: 4px solid var(--footer-accent); /* se “amarra” con la onda */
-  margin-top: -2px;            /* pega visualmente la onda inferior */
+.site-footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    border-top: 4px solid var(--footer-accent);
+    /* se “amarra” con la onda */
+    margin-top: -2px;
+    /* pega visualmente la onda inferior */
 }
 
-.site-footer__container{
-  grid-template-columns: 1.2fr 1fr 1fr; /* 3 columnas */
+.site-footer__container {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    /* 3 columnas */
 }
 
 /* Social pills: lavanda suave, 0 teal */
-.site-footer__social a{
-  background: rgba(165,139,219,.14);
-  color: var(--footer-text);
-  border:1px solid var(--footer-accent);
+.site-footer__social a {
+    background: rgba(165, 139, 219, .14);
+    color: var(--footer-text);
+    border: 1px solid var(--footer-accent);
 }
 
 /* Tipografía y links coherentes */
-.site-footer__heading{ color:#d7d9ff; }
-.site-footer__list a{ color: var(--footer-link); text-decoration:none; }
-.site-footer__list a:hover{ color: var(--footer-link-hover); text-decoration:underline; }
+.site-footer__heading {
+    color: #d7d9ff;
+}
+
+.site-footer__list a {
+    color: var(--footer-link);
+    text-decoration: none;
+}
+
+.site-footer__list a:hover {
+    color: var(--footer-link-hover);
+    text-decoration: underline;
+}
 
 /* 5) Eliminar newsletter (por si quedó en DOM) */
 .site-footer__newsletter,
 .site-footer__form,
-.site-footer__submit{ display:none !important; }
+.site-footer__submit {
+    display: none !important;
+}
 
 /* 6) Responsivo */
-@media (max-width: 1000px){
-  .site-footer__container{ grid-template-columns: 1fr 1fr; }
+@media (max-width: 1000px) {
+    .site-footer__container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
-@media (max-width: 600px){
-  .site-footer__container{ grid-template-columns: 1fr; }
+
+@media (max-width: 600px) {
+    .site-footer__container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .footer-credit {
-  font-size: 0.85rem;
-  color: #ccc;
-  text-align: center;
-  margin-top: 1rem;
+    font-size: .85rem;
+    color: #ccc;
+    text-align: center;
+    margin-top: 1rem
 }
+
 .footer-credit a {
-  color: #a58bdb;            /* lavanda de tu paleta */
-  text-decoration: none;
-  font-weight: 600;
+    color: #a58bdb;
+    text-decoration: none;
+    font-weight: 600
 }
+
 .footer-credit a:hover {
-  text-decoration: underline;
+    text-decoration: underline
 }
