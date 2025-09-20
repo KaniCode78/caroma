@@ -1,0 +1,408 @@
+/* ====== CTA de cierre ====== */
+.closing-cta {
+    position: relative;
+    background: #fff;
+    padding: 0 0 1.5rem;
+    overflow: hidden;
+    font-family: var(--fuentePrincipal, "Montserrat", sans-serif);
+}
+
+.closing-cta__wave {
+    width: 100%;
+    line-height: 0;
+}
+
+.closing-cta__wave svg {
+    width: 100%;
+    height: 90px;
+    display: block;
+}
+
+.closing-cta__wave--top path {
+    fill: var(--primary-color, #a58bdb);
+    opacity: .45;
+}
+
+.closing-cta__wave--bottom path {
+    fill: var(--primary-color, #a58bdb);
+    opacity: .45;
+}
+
+.closing-cta__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem clamp(1rem, 3vw, 2rem);
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: clamp(16px, 4vw, 40px);
+    align-items: center;
+}
+
+.closing-cta__title {
+    margin: 0 0 .35rem;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 1rem + 2.8vw, 2.6rem);
+    color: #111;
+}
+
+.closing-cta__subtitle {
+    margin: 0 0 1rem;
+    color: #2b4f54;
+    font-size: clamp(1rem, .8rem + .8vw, 1.125rem);
+}
+
+/* Botón con estilo del hero (usa @keyframes pulse ya existente) */
+.closing-cta__button {
+    background: linear-gradient(to right, rgba(114, 225, 244, .5), rgba(114, 225, 244, 0));
+    padding: .7rem 1.1rem;
+    border-radius: 12px;
+    border: rgba(250, 248, 248, .5) 2px solid;
+    color: #fff;
+    display: inline-block;
+    animation: pulse 2s infinite;
+    text-decoration: none;
+}
+
+/* Imagen lateral */
+.closing-cta__media {
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
+.closing-cta__media img {
+    width: min(420px, 100%);
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Variante glass (opcional) para la caja de texto */
+.closing-cta--glass .closing-cta__copy {
+    background: rgba(255, 255, 255, .28);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    backdrop-filter: blur(14px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+}
+
+/* Responsive CTA */
+@media (max-width: 900px) {
+    .closing-cta__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .closing-cta__media img {
+        width: min(300px, 90%);
+    }
+}
+
+/* ====== Footer ====== */
+.site-footer {
+    background: #0f2123;
+    color: #e8f3f4;
+    font-family: var(--fuentePrincipal, "Montserrat", sans-serif);
+    padding-top: 1rem;
+}
+
+.site-footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem clamp(1rem, 3vw, 2rem) 2rem;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1.2fr;
+    gap: clamp(16px, 3vw, 32px);
+}
+
+.site-footer__heading {
+    margin: 0 0 .5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #bfe9ef;
+}
+
+.site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.site-footer__logo {
+    width: 140px;
+    height: auto;
+}
+
+.site-footer__tagline {
+    color: #cde7ea;
+    font-size: .95rem;
+    margin: 0;
+}
+
+.site-footer__social {
+    list-style: none;
+    display: flex;
+    gap: .75rem;
+    padding: 0;
+    margin: .25rem 0 0;
+}
+
+.site-footer__social a {
+    display: inline-block;
+    padding: .3rem .5rem;
+    border-radius: 8px;
+    background: #14363a;
+    color: #e8f3f4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .85rem;
+}
+
+.site-footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: .35rem;
+}
+
+.site-footer__list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.site-footer__list a {
+    color: #e8f3f4;
+    text-decoration: none;
+}
+
+.site-footer__list a:hover {
+    text-decoration: underline;
+}
+
+.site-footer__form {
+    display: flex;
+    gap: .5rem;
+}
+
+.site-footer__form input {
+    flex: 1;
+    min-width: 0;
+    border-radius: 10px;
+    border: 1px solid #29565b;
+    background: #0c1a1c;
+    color: #e8f3f4;
+    padding: .6rem .8rem;
+    outline: none;
+}
+
+.site-footer__submit {
+    border-radius: 10px;
+    border: 1px solid rgba(250, 248, 248, .5);
+    background: linear-gradient(to right, rgba(114, 225, 244, .5), rgba(114, 225, 244, 0));
+    color: #fff;
+    padding: .6rem .9rem;
+    cursor: pointer;
+}
+
+.site-footer__bottom {
+    border-top: 1px solid #1f3f44;
+    padding: .8rem clamp(1rem, 3vw, 2rem);
+    text-align: center;
+    color: #a9cfd4;
+    font-size: .9rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 1000px) {
+    .site-footer__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer__container {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer__list li {
+        justify-content: flex-start;
+    }
+}
+
+
+/* ===== Armonía visual del cierre ===== */
+
+/* Ondas: usa la misma primaria, pero con 35% de opacidad */
+.closing-cta__wave--top path,
+.closing-cta__wave--bottom path {
+    fill: var(--primary-color, #a58bdb);
+    opacity: .35;
+}
+
+/* Fondo del cierre en blanco, sin “tinte” que choque con la onda */
+.closing-cta {
+    background: #fff;
+}
+
+/* Botón: más contraste (antes se veía lavado) */
+.closing-cta__button {
+    background: linear-gradient(90deg, #72e1f4, #72e1f400);
+    color: #fff;
+    /* mantiene blanco */
+    border-color: rgba(114, 225, 244, .65);
+}
+
+/* Imagen: pequeño borde suave para integrarla */
+.closing-cta__media img {
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+}
+
+/* ===== Footer: 3 columnas y colores coherentes ===== */
+.site-footer {
+    background: #0e1f22;
+    /* dark teal uniforme */
+    color: #e8f3f4;
+    border-top: 4px solid rgba(165, 139, 219, .35);
+    /* línea superior que “amarra” con la onda */
+}
+
+.site-footer__container {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    /* 3 columnas */
+}
+
+/* Social pills: usa secundarios más suaves */
+.site-footer__social a {
+    background: rgba(114, 225, 244, .15);
+    color: #d9f7fb;
+    border: 1px solid rgba(114, 225, 244, .35);
+}
+
+/* Links y textos: tonos consistentes */
+.site-footer__heading {
+    color: #bfe9ef;
+}
+
+.site-footer__list a {
+    color: #e8f3f4;
+}
+
+.site-footer__list a:hover {
+    color: #bfe9ef;
+    text-decoration: underline;
+}
+
+/* Remueve newsletter estilos heredados (por si quedaron) */
+.site-footer__newsletter,
+.site-footer__form,
+.site-footer__submit {
+    display: none !important;
+}
+
+/* Responsive sin newsletter */
+@media (max-width: 1000px) {
+    .site-footer__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= Harmonía cierre + footer (paleta lavanda/celeste) ================ */
+
+/* 1) Ondas: flush, sin saltos y con lavanda más presente */
+.closing-cta { 
+  background:#fff; 
+  margin: 0; 
+  padding-bottom: 0;          /* no empuja la onda inferior */
+}
+.closing-cta__wave { line-height: 0; height: 92px; }
+.closing-cta__wave svg { width: 100%; height: 100%; display: block; }
+.closing-cta__wave--top path,
+.closing-cta__wave--bottom path {
+  fill: var(--primary-color, #a58bdb);
+  opacity: .50;               /* más visible que .35 */
+}
+
+/* 2) CTA: usa lavanda (no teal) para el gradiente y el borde */
+.closing-cta__button{
+  background: linear-gradient(90deg, rgba(165,139,219,.75), rgba(165,139,219,0));
+  border-color: rgba(165,139,219,.65);
+  color:#fff;
+}
+
+/* 3) Imagen CTA: integración suave, sin tinte verdoso */
+.closing-cta__media img{
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+
+/* 4) Footer: fuera el verde; fondo neutro profundo + acentos lavanda */
+:root{
+  --footer-bg: #111218;       /* gris-neutro muy oscuro (sin matiz verde) */
+  --footer-text: #e9eef2;
+  --footer-link: #e9eef2;
+  --footer-link-hover: #cfd8ff; /* toque frío que combina con lavanda */
+  --footer-accent: rgba(165,139,219,.55); /* lavanda para líneas y pills */
+}
+
+.site-footer{
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  border-top: 4px solid var(--footer-accent); /* se “amarra” con la onda */
+  margin-top: -2px;            /* pega visualmente la onda inferior */
+}
+
+.site-footer__container{
+  grid-template-columns: 1.2fr 1fr 1fr; /* 3 columnas */
+}
+
+/* Social pills: lavanda suave, 0 teal */
+.site-footer__social a{
+  background: rgba(165,139,219,.14);
+  color: var(--footer-text);
+  border:1px solid var(--footer-accent);
+}
+
+/* Tipografía y links coherentes */
+.site-footer__heading{ color:#d7d9ff; }
+.site-footer__list a{ color: var(--footer-link); text-decoration:none; }
+.site-footer__list a:hover{ color: var(--footer-link-hover); text-decoration:underline; }
+
+/* 5) Eliminar newsletter (por si quedó en DOM) */
+.site-footer__newsletter,
+.site-footer__form,
+.site-footer__submit{ display:none !important; }
+
+/* 6) Responsivo */
+@media (max-width: 1000px){
+  .site-footer__container{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px){
+  .site-footer__container{ grid-template-columns: 1fr; }
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  color: #ccc;
+  text-align: center;
+  margin-top: 1rem;
+}
+.footer-credit a {
+  color: #a58bdb;            /* lavanda de tu paleta */
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-credit a:hover {
+  text-decoration: underline;
+}
