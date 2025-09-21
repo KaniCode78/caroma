@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
+  <!-- ================= Básicos ================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dile Jess a tu Futuro</title>
 
-  <!-- Fuentes -->
+  <!-- ================= Fuentes / Iconos ================= -->
+  <!-- Preconexión para acelerar Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Awesome solo CSS con SRI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papwRdsToxSgEo3rAg+cY6Fqk2Q4EyfI2aG+j6dLcdogxdsl+AN/4ApnyYe6SJDvc07vWduQk8hGytcfK2z5xg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Iconos (solo CSS, sin kit JS) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Canonical + SEO -->
+  <!-- ================= SEO básico ================= -->
   <link rel="canonical" href="https://dilejess.netlify.app/">
   <meta name="description"
     content="Protege tu patrimonio y tu tranquilidad con asesoría de seguros certificada. Agenda tu cita y descubre cómo cuidar tu futuro.">
 
-  <!-- Open Graph / Facebook -->
+  <!-- ================= Open Graph (Facebook / LinkedIn / WhatsApp) ================= -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dile Jess a tu Futuro – Asesoría de Seguros">
   <meta property="og:description"
@@ -27,26 +31,35 @@
   <meta property="og:image" content="https://dilejess.netlify.app/assets/images/og-cover.jpg">
   <meta property="og:locale" content="es_MX">
 
-  <!-- Twitter -->
+  <!-- ================= Twitter Cards ================= -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dile Jess a tu Futuro – Asesoría de Seguros">
   <meta name="twitter:description"
     content="Protege tu patrimonio y tu tranquilidad con asesoría de seguros certificada.">
   <meta name="twitter:image" content="https://dilejess.netlify.app/assets/images/og-cover.jpg">
 
-  <link rel="icon" href="./assets/images/corazon.ico" type="image/x-icon" />
+  <!-- ================= Iconos & Manifest ================= -->
+  <!-- Favicon clásico -->
+  <link rel="icon" href="./assets/images/corazon.ico" type="image/x-icon">
+  <!-- Icono para iOS/Android -->
+  <link rel="apple-touch-icon" href="./assets/images/corazon-180.png" sizes="180x180">
+  <!-- Web App Manifest (para PWA, si lo usas) -->
+  <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Tus CSS -->
+  <!-- ================= Tus CSS ================= -->
   <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/normalize.css" />
   <link rel="stylesheet" href="./assets/css/social_fixed.css" />
   <link rel="stylesheet" href="./assets/css/carrousel.css" />
   <link rel="stylesheet" href="./assets/css/beneficios.css" />
   <link rel="stylesheet" href="./assets/css/about.css" />
   <link rel="stylesheet" href="./assets/css/cards2.css" />
   <link rel="stylesheet" href="./assets/css/footer.css" />
+  <!-- Overrides y accesibilidad siempre al final -->
   <link rel="stylesheet" href="./assets/css/global-overrides.css" />
-
 </head>
+
+
 
 <body>
   <a class="skip-link" href="#main">Saltar al contenido principal</a>
@@ -74,7 +87,7 @@
   <!-- Fix Redes Sociales -->
 
   <!-- Header -->
-   
+
   <header class="contenedor_header" id="Home">
     <div class="navbar">
       <div class="logo">
@@ -550,14 +563,15 @@
 
   <!-- SEO JSON-LD -->
   <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   "name": "Dile Jess a tu Futuro",
-  "image": "https://dilejess.netlify.app/assets/images/logojess.png",
   "url": "https://dilejess.netlify.app/",
+  "logo": "https://dilejess.netlify.app/assets/images/logojess.png",
+  "image": "https://dilejess.netlify.app/assets/images/logojess.png",
   "email": "contacto@dilejessatufuturo.com",
-  "telephone": "+52 998 555 1010",
+  "telephone": "+529985551010",
   "areaServed": "MX",
   "founder": "Jessica Abrego",
   "sameAs": [
@@ -566,9 +580,9 @@
     "https://www.tiktok.com/@jessicabrego",
     "https://wa.me/5215515105853"
   ]
-  }
-  </script>
-  </script>
+}
+</script>
+
 </body>
 
 </html>
